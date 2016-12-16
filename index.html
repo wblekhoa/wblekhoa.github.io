@@ -1,7 +1,631 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+  <title>JAK Studio - Lê Khoa 's rồ giét</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  
+  * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+
+  body {
+      font: 15px Montserrat, sans-serif;
+  }
+
+  .navbar {
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      letter-spacing: 4px;
+      padding: 10px;
+      color: white;
+      opacity: 0.8;
+  }
+  
+  .navbar li {
+    font-size: 12px;
+    margin-right: 65px;
+    margin-left:  55px;
+    background-color: #222;
+  }
+  
+  .nav li a:hover {
+    text-decoration: none;
+    background-color: #131313;
+    color: #777 !important;
+  }
+
+  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: transparent;
+  }
+
+  .navbar-inverse .navbar-nav>li>a {
+    color: #fdfdfd;
+  }
+
+  .navbar-toggle {
+    float: left;
+    margin-left: 17px;
+  }
+
+  .div1 {
+    background-image: url("images/div1.jpeg");
+    background-color: gray;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  .div2 {
+    background-image: url("images/div2.jpg");
+    background-color: #a0a0a0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: screen;
+    opacity: 0.6;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  .div3 {
+    
+    background-image: url("images/div32.jpeg");
+    background-color: gray;
+    padding-bottom: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    opacity: 0.9  ;
+  }
+  
+  .div4 {
+    background-image: url("images/div4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 150px;
+    padding-top: 150px;
+  }
+
+  .div5 {
+    background-image: url("images/div1.jpeg");
+    background-color: gray;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  .div6 {
+    background-image: url("images/div2.jpg");
+    background-color: #a0a0a0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: screen;
+    padding-bottom: 150px;
+    padding-top: 150px;
+  }
+
+
+  .div1 h4 {
+    margin-top: 5px;
+    letter-spacing: 5px;
+    font-size: 15px;
+    color: white;
+  }
+  
+  .google {
+  margin-top: 540px !important;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  }
+
+  .google:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.2);
+  z-index: 15;
+
+  }
+
+  .div1 img {
+    margin-top: 110px;
+  }
+
+  .div1 hr {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    border-top: 2px solid #eee;
+    width: 35px;
+  }
+  
+  .div2 h3 {
+    letter-spacing: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }  
+
+  .div2 hr {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-top: 2px solid black;
+    width: 35px;
+  }
+
+  .div2 ul {
+    padding-left: 385px;
+  }
+
+  .div2 h4 {
+    margin-bottom: 40px;
+  }
+
+  .div2 img {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  }
+
+  .div2 img:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  z-index: 15;
+
+  }
+
+  .div3 h3 {
+    letter-spacing: 4px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  .thumbnail {
+    padding: 0px;
+    background-color: transparent;
+    border-radius: 0px;
+    border : 0px ;
+    
+    margin-bottom: 0px;
+  }
+  
+  .div3col {
+    padding: 0px;
+
+  }
+
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 40px;
+ }
+
+ .google2 {
+    
+    padding: 5px;
+  }
+
+  footer p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  
+
+  .div4 div {
+    width: 600px;
+    padding: 70px;
+    opacity: 0.9; 
+  }
+
+  .div4 hr {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-top: 2px solid #eee;
+    width: 45px;
+  }
+   
+   .div4 h3 {
+    color: white;
+    letter-spacing: 8px;
+   }
+
+   .div4 p {
+    color: white;
+    line-height: 2.4;
+   }
+   
+   .div6div {
+    width: 750px;
+    padding: 70px;
+    opacity: 0.8; 
+  }
+
+  .h3div6 {
+    letter-spacing: 8px;
+    text-align: center;
+    margin-bottom: 10px;
+   }
+
+   .pdiv6 {
+    margin-bottom: 70px;
+    text-align: center;
+    opacity: 0.7;
+   }
+  
+  .div6 input {
+    margin-bottom: 10px;
+    border-radius: 0px;
+    position: center;
+  }
+
+  textarea {
+    resize: none;
+    border-radius: 0px !important;
+    margin-bottom: 10px;
+  }
+
+  .div6 button {
+    background-color: #2d2d30;
+    color: white;
+
+  }
+  
+
+  
+
+  @media (max-width: 1200px) {
+    .navbar li {
+    font-size: 12px;
+    margin-right: 35px;
+    margin-left:  25px;
+    background-color: #222;
+  }
+  }
+
+  @media (max-width: 990px) {
+    .navbar li {
+    font-size: 12px;
+    margin-right: 20px;
+    margin-left:  10px;
+    background-color: #222;
+  }
+
+    .div4 div {
+    width: auto;
+    padding: 70px;
+    opacity: 0.9; 
+    font-size: 12px;
+  }
+
+  }
+
+  @media (max-width: 770px) {
+
+    .div4 div {
+    width: auto;
+    padding: 70px;
+    opacity: 0.9; 
+    font-size: 12px;
+  }
+
+  .div6 col-xs-6 {
+    width: auto;
+    margin: auto;
+    
+  }
+
+  .form-control {
+    width: auto;
+  }
+
+  .div6div {
+    width: auto;
+    padding: 70px;
+    opacity: 0.8; 
+    font-size: 80%;
+
+  }
+  }
+
+   @media (max-width: 1300px) {
+    .div2 img {
+      padding: 30px;  
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .div2 img {
+      padding: 50px 90px 50px 0px;;  
+    }
+  }
+
+  @media (max-width: 770px) {
+    .div2 img {
+      padding: 50px 50px 50px 50px;;  
+    }
+    .form-control {
+    width: 100%;
+}
+  }
+ 
+  @media (max-width: 600px) {
+.form-control {
+    width: 100% !important;
+}
+.div6 button {
+   margin-right: 0px !important;
+  }
+
+}
+
+@media (max-width: 767px) {
+.form-control {
+    width: 400px;
+}
+ 
+ .tel {
+  margin-bottom: 40px;
+ }
+
+ .div6 button {
+   margin-right: 27px;
+  }
+}
+
+.logo:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.3);
+  background-color: white;
+  z-index: 15;
+
+}
+
+.logo {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+
+  </style>
+
+</head>
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">  
+<!-- Navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+  <div class="container">
+    <div class="navbar-header ">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+  
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-center">
+
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#sevices">SERVICES</a></li>
+        <li><a href="#products">PRODUCT</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </UL>  
+    </div>
+  </div>
+</nav>
+
+<!-- Div 1 -->
+<div class="container div1 text-center" style="width:auto" id="home">
+  <img src="images/logo.png" width="170" height="170z">
+  <h4 class="h3div1">JAK STUDIO</h4>
+
+  <a href="https://www.facebook.com/JAKKstudio/" target="_blank"><img src="images/fb.png" width="70" height="70" class="google"></a>
+  <a href="https://www.youtube.com/c/jakstudio1" target="_blank"><img src="images/yt.png" width="90" height="70" class="google"></a>
+  <a href="https://plus.google.com/+JAKStudio1" target="_blank"><img src="images/google.png" width="70" height="70" class="google"></a>
+  <hr>
+</div>
+
+<!-- Div 2 -->
+<div class="container div2 text-center" style="width:auto" id="sevices">
+   <h3>WHAT WE DO ?</h3>
+   <h4>We can . .</h4>
+  
+   <div class="row">
+    
+    <div class="col-xs-0 col-sm-2 col-md-3 col-lg-3">
+      
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+      <a class="div2image" href="#ve" data-toggle="collapse"><img src="images/ve.png" width="300" height="300" onmouseover="this.src='images/vehover.png';" onmouseout="this.src='images/ve.png';"></a>
+        <div id="ve" class="collapse">
+      <h3>VIDEO EFFECT</h3>
+      <p>Loves long walks on the beach</p>
+      <p>Member since 1988</p>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+      <a class="div2image" href="#ds" data-toggle="collapse"><img src="images/ds.png" width="300" height="300" onmouseover="this.src='images/dshover.png';" onmouseout="this.src='images/ds.png';"></a>
+      <div id="ds" class="collapse">
+      <h3>DESIGN</h3>
+      <p>Loves long walks on the beach</p>
+      <p>Member since 1988</p>
+        </div>
+    </div>
+    <div class="col-xs-0 col-sm-2 col-md-3 col-lg-3">
+      
+    </div>
+    
+</div>
+</div>
+ 
+<!-- Div 3 -->
+<div class="container div3 text-center" style="width:auto" id="products">
+  <h3>WHAT WE WORKED :</h3>
+ <div class="row">
+ <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+   
+ </div>
+
+ <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+  <div class="col-md-4 div3col">
+    <div class="thumbnail">
+      <a href="images/work1.png" target="_blank">
+        <img src="images/work3.png" class="logo" style="width:100%">
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4 div3col">
+    <div class="thumbnail">
+      <a href="images/work2.png" target="_blank">
+        <img src="images/work4.png" class="logo" style="width:100%">
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4 div3col">
+    <div class="thumbnail">
+      <a href="images/work3.png" target="_blank">
+        <img src="images/work3.png" class="logo" style="width:100%">
+      </a>
+    </div>
+  </div>
+
+  <div class="col-md-4 div3col">
+    <div class="thumbnail">
+      <a href="images/work1.png" target="_blank">
+        <img src="images/work4.png" class="logo" style="width:100%">
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4 div3col">
+    <div class="thumbnail">
+      <a href="images/work1.png" target="_blank">
+        <img src="images/work3.png" class="logo" style="width:100%">
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4 div3col">
+    <div class="thumbnail">
+      <a href="images/work1.png" target="_blank">
+        <img src="images/work3.png" class="logo" style="width:100%">
+      </a>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+   
+ </div>
+
+</div>
+</div>
+
+<!-- Div 4 -->
+<div class="container div4 text-center" style="width:auto" id="about">
+   <div class="container text-center div4div">
+      <h3>ABOUT US</h3>
+      <hr>
+      <p>Major projects under construction include Mavişehir Residential Development in Izmir, Turkey; Gap Inşaat Tower in Istanbul, Turkey; KL Gateway in Kuala Lumpur, Malaysia; Chengtou Bay Valley Science & Technology Park in Shanghai, China; Zhongxun Times in Chongqing, China; The Fujian Photonic University in Xiamen, China; Galaxy Moonbay Renaissance Hotel in Changzhou, China; Greatwall Changchenghui Mixed Use Development in Wuhan.
+      </p>
+   </div>
+</div>
+ 
+ <!-- Div 5 -->
+<div class="container div5 text-center" style="width:auto" >
+<div class="row"> 
+</div>
+</div>
+
+<!-- Div 6 -->
+<div class="container div6 " style="width:auto" id="contact">
+   <div class="container div6div">
+      <h3 class="h3div6">CONTACT US</h3>
+      <p class="pdiv6">We can do alots...</p>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <p>500 Terry Francois Street San Francisco, CA 94158</p>
+        <p>info@mysite.com</p>
+        <p class="tel">Tel: 123-456-7890</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        <input class="form-control" id="Subject" name="Subject" placeholder="Subject" type="text" required>
+         <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5">
+        </textarea>
+         <button class="btn pull-right" type="submit">Send</button>
+      </div>
+   </div>
+</div>
+ 
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <a href="https://www.facebook.com/JAKKstudio/" target="_blank"><img src="images/fb.png" width="45" height="45" class="google2"></a>
+  <a href="https://www.youtube.com/c/jakstudio1" target="_blank"><img src="images/yt.png" width="55" height="45" class="google2"></a>
+  <a href="https://plus.google.com/+JAKStudio1" target="_blank"><img src="images/google.png" width="45" height="45" class="google2"></a>
+  <br>
+  <p>©jakstudio - Lê Khoa - web design class</p> 
+</footer>
+  
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
 </body>
 </html>
