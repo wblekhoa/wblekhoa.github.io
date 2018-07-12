@@ -1,0 +1,1432 @@
+.wrapper {
+    position: relative;
+    #slider {
+        position: relative;
+        .revo-slider-emphasis-text {
+            font-size: 70px;
+            letter-spacing: -1px;
+            border-top: 2px solid #FFF;
+            border-bottom: 2px solid #FFF;
+            width: 100vw !important;
+            font-family: 'din-black';
+            text-transform: uppercase;
+            @include breakpoint (768) {
+                font-size: 50px;
+            }
+        }
+        .revo-slider-desc-text {
+            font-size: 24px;
+            width: 700px;
+            max-width: 700px;
+            line-height: 1.5;
+            @include breakpoint (768) {
+                text-align: left;
+                max-height: 75px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+            @include breakpoint (540) {
+                width: 500px;
+                max-width: 500px;
+            }
+        }
+        .revo-slider-caps-text {
+            width: 650px;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            @include breakpoint (540) {
+                display: none!important;
+            }
+        }
+        .tp-video-play-button {
+            display: none !important;
+        }
+        .tp-caption {
+            white-space: nowrap;
+        }
+        .tp-thumb {
+            border: 3px solid white;
+            opacity: 0.7 !important;
+        }
+        .tp-thumbs {
+            @include breakpoint(992) {
+                display: none !important;
+            }
+        }
+        .tp-thumb.selected {
+            opacity: 1 !important;
+        }
+        .tp-bannertimer {
+            background: $mainBlue;
+        }
+        .button {
+            height: 50px !important;
+            padding: 0px 25px 0px 30px !important;
+            font-size: 18px !important;
+            line-height: 42px !important;
+            @include breakpoint (768) {
+                height: 40px !important;
+                line-height: 32px !important;
+            }
+        }
+        a.button {
+            z-index: 10;
+            border: 2px solid $mainBlue;
+            background-color: transparent;
+            transition: all 125ms ease-in-out !important;
+            &:hover {
+                background-color: $mainBlue;
+                color: white;
+                .icon {
+                    margin-left: 15px !important;
+                    transition: all 125ms ease-in-out !important;
+                }
+            }
+            .icon {
+                margin-left: 5px !important;
+            }
+        }
+        .search-home {
+            background-color: $mainBlue;
+            position: absolute;
+            width: 100%;
+            padding: 150px 0px 30px;
+            bottom: 0;
+            background: url('../Images/tim-tour-bg.png');
+            background-size: cover;
+            background-position: top center;
+            z-index: 8;
+            @include breakpoint (768) {
+                padding: 0px 0px 0px;
+            }
+            .container-fluid {
+                .row {
+                    .search-bar {
+                        padding: 0px 80px;
+                        width: 100%;
+                        .tim-tour {
+                            float: left;
+                            font-size: 34px;
+                            font-family: 'din-bold';
+                            text-transform: uppercase;
+                            color: white;
+                            line-height: 1;
+                            .icon {
+                                margin-right: 15px;
+                            }
+                        }
+                        .input-section {
+                            float: left;
+                            padding-left: 50px;
+                            padding-right: 50px;
+                            width: calc(100% - 410px);
+                            .group-input {
+                                float: left;
+                                background-color: white;
+                                margin-left: 20px;
+                                width: calc(33.333333% - 15px);
+                                input,
+                                select {
+                                    color: $text;
+                                    border: none;
+                                    height: 45px;
+                                    width: calc(100% - 56px);
+                                    @include placeholder-opacity(0.4);
+                                }
+                                &:first-child {
+                                    margin-left: 0px;
+                                }
+                                .input-icon {
+                                    padding-right: 15px;
+                                    padding-left: 15px;
+                                    padding-top: 4px;
+                                    font-size: 25px;
+                                    display: block;
+                                    float: left;
+                                    color: $mainBlue;
+                                }
+                            }
+                        }
+                        .tim-kiem {
+                            float: left;
+                            a {
+                                font-size: 34px;
+                                font-family: 'din-bold';
+                                text-transform: uppercase;
+                                color: white;
+                                line-height: 1;
+                            }
+                            i {
+                                font-size: 27px;
+                                margin-left: 10px;
+                                transition: all 200ms ease-in-out;
+                            }
+                            &:hover {
+                                i {
+                                    margin-left: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @include breakpoint(1200) {
+                .container-fluid {
+                    .row {
+                        .search-bar {
+                            padding: 0px 20px 0px 40px;
+                        }
+                    }
+                }
+            }
+            @include breakpoint(992) {
+                position: relative;
+                margin-top: -160px;
+                background-color: $mainBlue;
+                background: url('../Images/tim-tour-bg.png') no-repeat;
+                background-size: 1500px;
+                overflow: hidden;
+                padding-bottom: 0px;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 150px;
+                    background-color: $mainBlue;
+                    width: 100%;
+                    height: 100vh;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    bottom: -50px;
+                    background-color: $mainBlue;
+                    width: 100%;
+                    height: 50px;
+                    border-bottom-right-radius: 50%;
+                }
+                .container-fluid {
+                    .row {
+                        .search-bar {
+                            z-index: 5;
+                            padding: 0px 160px;
+                            padding-top: 10px;
+                            padding-bottom: 0px;
+                            width: 100%;
+                            .tim-tour {
+                                float: inherit;
+                                text-align: center;
+                                letter-spacing: 3px;
+                                .icon {
+                                    margin-right: 10px;
+                                }
+                            }
+                            .input-section {
+                                float: inherit;
+                                width: 100%;
+                                padding-left: 0px;
+                                padding-right: 0px;
+                                margin-top: 30px;
+                                max-width: 600px;
+                                @include margin-auto;
+                                .group-input {
+                                    width: 100%;
+                                    float: inherit;
+                                    margin-left: 0px;
+                                    margin-top: 20px;
+                                    input {}
+                                    .input-icon {}
+                                }
+                            }
+                            .tim-kiem {
+                                width: 100%;
+                                text-align: center;
+                                margin-top: 30px;
+                                a {
+                                    letter-spacing: 3px;
+                                    i {
+                                        margin-left: 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @include breakpoint(768) {
+                position: relative;
+                margin-top: -160px;
+                background-color: $mainBlue;
+                background: url('../Images/tim-tour-bg.png') no-repeat;
+                background-size: 1500px;
+                overflow: hidden;
+                padding-bottom: 0px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 140px;
+                    background-color: $mainBlue;
+                    width: 100%;
+                    height: 100vh;
+                }
+                .container-fluid {
+                    .row {
+                        .search-bar {
+                            z-index: 5;
+                            padding: 0px 15px;
+                            padding-top: 140px;
+                            width: 100%;
+                            .tim-tour {
+                                float: inherit;
+                                text-align: center;
+                                font-size: 24px;
+                                letter-spacing: 3px;
+                                .icon {
+                                    margin-right: 10px;
+                                }
+                            }
+                            .input-section {
+                                float: inherit;
+                                width: 100%;
+                                max-width: 400px;
+                                padding-left: 0px;
+                                padding-right: 0px;
+                                margin-top: 20px;
+                                .group-input {
+                                    width: 100%;
+                                    float: inherit;
+                                    margin-left: 0px;
+                                    margin-top: 10px;
+                                    input {}
+                                    .input-icon {}
+                                }
+                            }
+                            .tim-kiem {
+                                width: 100%;
+                                text-align: center;
+                                margin-top: 20px;
+                                a {
+                                    font-size: 24px;
+                                    letter-spacing: 3px;
+                                    i {
+                                        font-size: 20px;
+                                        margin-left: 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .features {
+        position: relative;
+        padding-top: 100px;
+        overflow: hidden;
+        .container {
+            padding: 0 50px;
+            .row {
+                >div {
+                    .featureBox {
+                        text-align: center;
+                        padding-right: 15px;
+                        padding-left: 15px;
+                        .icon {
+                            display: block;
+                            font-size: 100px;
+                            color: $mainBlue;
+                        }
+                    }
+                }
+            }
+        }
+        @include breakpoint(992) {
+            padding-top: 170px;
+            &:before {
+                content: "";
+                position: absolute;
+                top: -85vw;
+                background-color: $mainBlue;
+                width: 100%;
+                height: 100vw;
+                clip-path: circle(99.7% at 50% 0);
+            }
+        }
+        @include breakpoint(768) {
+            padding-top: 130px;
+            .container {
+                .row {
+                    div {
+                        padding-right: 0;
+                        padding-left: 0;
+                        .featureBox {
+                            padding-right: 0;
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .arrowSlide {
+            @include breakpoint(768) {
+                top: 15%;
+                font-size: 18px;
+            }
+            &.left-arrowSlide {
+                left: -0px;
+            }
+            &.right-arrowSlide {
+                right: -0px;
+            }
+        }
+    } // tour noi bat
+    .tour-noibat {
+        padding-top: 50px;
+        overflow: hidden;
+        .container {
+            .row {
+                position: relative;
+                >.image {
+                    margin-left: -8vw;
+                    max-width: 785px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .contain {
+                    position: absolute;
+                    top: 105px;
+                    left: 230px;
+                    @include breakpoint(1600) {
+                        left: 280px;
+                    }
+                    @include breakpoint(1200) {
+                        left: 0px;
+                    }
+                    @include breakpoint(768) {
+                        top: 85px;
+                    }
+                    @include breakpoint(414) {
+                        top: 20px;
+                    }
+                    .description {
+                        position: relative;
+                        max-width: 600px;
+                        padding: 15px;
+                        background-color: white;
+                        @include breakpoint(1200) {
+                            left: 300px;
+                            top: -30px;
+                            max-width: 420px;
+                        }
+                        @include breakpoint(768) {
+                            display: none;
+                        }
+                    }
+                    .tourSlide {
+                        margin-top: 55px;
+                        position: relative;
+                        .wrap {
+                            width: 1400px;
+                            position: absolute;
+                            left: -35px;
+                            @include breakpoint(1200) {
+                                left: -35px;
+                            }
+                            @include breakpoint(992) {
+                                left: -44vw;
+                            }
+                            @include breakpoint(768) {
+                                width: 100vw;
+                                padding: 15px;
+                                left: 0;
+                            }
+                            .item {
+                                .image-tourSlide {
+                                    position: relative;
+                                    padding-top: 10px;
+                                    padding-bottom: 35px;
+                                    padding-left: 35px;
+                                    padding-right: 25px;
+                                    transition: all 425ms ease-in-out;
+                                    .image {
+                                        max-width: 450px;
+                                        overflow: hidden;
+                                        border: 10px solid white;
+                                        box-shadow: 2px 3px 28px 0px rgba(0, 0, 0, 0.06);
+                                        transition: all 225ms ease-in-out;
+                                        img {
+                                            width: 100%;
+                                            transition: all 1600ms ease-in-out;
+                                        }
+                                    }
+                                    .info {
+                                        position: absolute;
+                                        background-color: white;
+                                        width: 300px;
+                                        max-width: 300px;
+                                        font-family: "din";
+                                        bottom: 90px;
+                                        left: 0;
+                                        padding: 7px 10px 7px 10px;
+                                        .location {
+                                            .text {
+                                                max-height: 24px;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                display: -webkit-box;
+                                                -webkit-line-clamp: 1;
+                                                -webkit-box-orient: vertical;
+                                            }
+                                        }
+                                        .info-item {
+                                            position: relative;
+                                            padding: 8px;
+                                            display: flex;
+                                            .icon {
+                                                width: 15%;
+                                                i {
+                                                    font-size: 20px;
+                                                    margin-right: 10px;
+                                                    color: $mainBlue;
+                                                }
+                                            }
+                                            &:nth-child(2),
+                                            &:nth-child(3) {
+                                                i {
+                                                    font-size: 27px;
+                                                }
+                                            }
+                                            &:nth-child(4) {
+                                                i {
+                                                    font-size: 22px;
+                                                }
+                                            }
+                                            .text {
+                                                width: 85%;
+                                                line-height: 1.4;
+                                            }
+                                        }
+                                    }
+                                    .chitiet {
+                                        position: absolute;
+                                        bottom: 90px;
+                                        right: 35px;
+                                        opacity: 0;
+                                        transform: translate3d(-50%, 0, 0);
+                                        transition: all 225ms ease-in-out;
+                                    }
+                                    &:hover {
+                                        .image {
+                                            box-shadow: 0px 10px 25px 0px rgba(0, 171, 236, 0.15);
+                                            img {
+                                                transform: scale(1.2) translate(5%, -5%);
+                                            }
+                                        }
+                                        .chitiet {
+                                            opacity: 1;
+                                            transform: none;
+                                        }
+                                    }
+                                    &:hover {
+                                        transform: translate(0, -7px);
+                                    }
+                                }
+                            }
+                        }
+                        @include breakpoint(768) {
+                            .wrap {
+                                .item {
+                                    .image-tourSlide {
+                                        padding-right: 15px;
+                                        padding-left: 15px;
+                                        padding-bottom: 45px;
+                                        .info {
+                                            bottom: 20px;
+                                            box-shadow: 5px 5px 30px -10px rgba(0, 0, 0, 0.15);
+                                            width: 250px;
+                                        }
+                                        .chitiet {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .arrowSlide2 {
+                            color: $text;
+                            cursor: pointer;
+                            font-size: 30px;
+                            bottom: -40px;
+                            z-index: 5;
+                            position: absolute;
+                            background-color: white;
+                            padding: 15px;
+                            box-shadow: 2px 3px 28px 0px rgba(0, 0, 0, 0.2);
+                            @include breakpoint(1200) {
+                                bottom: -80px;
+                                @include horizontal-align;
+                            }
+                            @include breakpoint(768) {
+                                bottom: -50px;
+                                box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
+                            }
+                            &.left-arrowSlide {
+                                left: 35px;
+                                @include breakpoint(1200) {
+                                    left: 37%;
+                                }
+                                @include breakpoint(992) {
+                                    left: 48%;
+                                }
+                                @include breakpoint(768) {
+                                    left: 43%;
+                                }
+                            }
+                            &.right-arrowSlide {
+                                left: 110px;
+                                @include breakpoint(1200) {
+                                    left: 42.5%;
+                                }
+                                @include breakpoint(992) {
+                                    left: 53.5%;
+                                }
+                                @include breakpoint(768) {
+                                    left: 58%;
+                                }
+                            }
+                            &:hover {
+                                color: $mainBlue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include breakpoint(768) {
+            padding-bottom: 80px;
+            .container {
+                .row {
+                    >.image {
+                        max-width: 100vw;
+                    }
+                }
+            }
+        }
+    } // Fullwidth Home Banner
+    .fullWidthBanner {
+        .container-fluid {
+            .row {
+                position: relative; // .overlayTexture {
+                //     z-index: 5;
+                //     width: 100%;
+                //     .wrap {
+                //         position: absolute;
+                //         top: 0;
+                //         .image {
+                //             width: 100vw;
+                //             height: 885px;
+                //             background-image: url(Images/overlayHomeBanner.png);
+                //             background-repeat: no-repeat;
+                //             background-size: cover;
+                //             background-position: center center;
+                //         }
+                //     }
+                // }
+                .overlay {
+                    background-repeat: no-repeat;
+                    left: inherit;
+                    top: inherit;
+                }
+                .overlay-top {
+                    position: absolute;
+                    top: 0;
+                    z-index: 8;
+                    width: 100%;
+                    height: 247px;
+                }
+                .overlay-right {
+                    position: absolute;
+                    background-position: right center;
+                    top: 0;
+                    right: 0;
+                    z-index: 8;
+                    width: 470px;
+                    height: 100%;
+                    @include breakpoint(1200) {
+                        display: none;
+                        background-image: none !important;
+                    }
+                }
+                .overlay-bot {
+                    position: absolute;
+                    background-position: center bottom;
+                    bottom: -10px;
+                    z-index: 8;
+                    width: 100%;
+                    height: 247px;
+                }
+                .overlay-left {
+                    position: absolute;
+                    background-position: left center;
+                    top: 0;
+                    left: 0;
+                    z-index: 8;
+                    width: 470px;
+                    height: 100%;
+                    @include breakpoint(1200) {
+                        display: none;
+                        background-image: none !important;
+                    }
+                }
+                .imageSlide {
+                    width: 100%;
+                    .item {
+                        position: relative;
+                        .text {
+                            cursor: default;
+                            z-index: 20;
+                            @include center-align-absolute;
+                            text-align: center;
+                            color: white;
+                            max-width: 1000px;
+                            .top-description {
+                                margin: auto;
+                                color: white;
+                                line-height: 1.4;
+                                margin-bottom: 18px;
+                                max-width: 640px;
+                                max-height: 45px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 6;
+                                -webkit-box-orient: vertical;
+                            }
+                            .title {
+                                margin: auto;
+                                font-family: 'rukola';
+                                font-size: 100px;
+                                color: white;
+                                line-height: 1;
+                            }
+                            .description {
+                                margin: auto;
+                                color: white;
+                                max-width: 640px;
+                                max-height: 145px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 6;
+                                -webkit-box-orient: vertical;
+                            }
+                            .datve {
+                                z-index: 20;
+                                margin-top: 30px;
+                            }
+                            @include breakpoint(768) {
+                                width: 100vw;
+                                padding: 0px 25px;
+                                .title {
+                                    font-size: 64px;
+                                }
+                            }
+                        }
+                        .image {
+                            filter: blur(3px);
+                            height: 885px;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center center;
+                            transition: all 400ms ease-in-out;
+                        }
+                    }
+                    .slick-dots {
+                        li {
+                            button {
+                                &:hover,
+                                &:focus {
+                                    &:before {
+                                        color: $mainBlue;
+                                    }
+                                }
+                            }
+                            &.slick-active button:before {
+                                opacity: 1;
+                                color: $mainYellow;
+                            }
+                        }
+                    }
+                    .arrowSlide {
+                        color: white;
+                        font-size: 45px;
+                        z-index: 15;
+                        &.left-arrowSlide {
+                            left: 12vw;
+                        }
+                        &.right-arrowSlide {
+                            right: 12vw;
+                        }
+                        &:hover {
+                            color: $mainBlue;
+                        }
+                    }
+                }
+            }
+        }
+    } // Du lich trong nuoc - home3 - Du lich nuoc ngoai - home4
+    .dulich-trongnuoc-home,
+    .dulich-nuocngoai-home {
+        margin-top: 50px;
+        .text-col {
+            max-width: 1140px;
+            margin-right: auto;
+            margin-left: auto;
+            >.text {
+                position: relative;
+                padding-top: 25px;
+                max-width: 400px;
+                margin-left: 100px;
+                z-index: 4;
+                background-color: white;
+                span {
+                    z-index: 3;
+                    display: block;
+                    color: $text;
+                    padding-right: 0px;
+                    margin-bottom: 20px;
+                    letter-spacing: 1.5px;
+                }
+                &:after {
+                    content: "";
+                    z-index: -1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 55px;
+                    height: 8px;
+                    background-color: $mainBlue;
+                }
+                &:before {
+                    content: "";
+                    z-index: -1;
+                    position: absolute;
+                    top: 0;
+                    left: 65px;
+                    width: 8px;
+                    height: 8px;
+                    background-color: $mainYellow;
+                }
+            }
+            @include breakpoint(540) {
+                >.text {
+                    margin-left: 30px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        >.row {
+            margin-top: 30px;
+            padding-top: 220px;
+            background-repeat: no-repeat;
+            background-size: 1350px, 0;
+            background-position: center top, center 10px;
+            @include breakpoint(768) {
+                padding-top: 150px;
+                background-size: 130vw, 1200px;
+            }
+            @include breakpoint(540) {
+                padding-top: 80px;
+                background-size: 130vw, 1200px;
+            }
+            .dulich-trongnuoc-home__container,
+            .dulich-nuocngoai-home__container {
+                .row {
+                    .tour-box-col {
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        .tour-box {
+                            border: 10px solid white;
+                            box-shadow: 5px 3px 20px 0px rgba(0, 0, 0, 0.06);
+                            transition: all 225ms ease-in-out;
+                            .image {
+                                overflow: hidden;
+                                position: relative;
+                                .chitiet {
+                                    overflow: hidden;
+                                    z-index: 4;
+                                    background-color: rgba(255, 255, 255, 1);
+                                    width: 70px;
+                                    height: 70px;
+                                    @include center-align-absolute;
+                                    top: 60%;
+                                    border-radius: 50%;
+                                    opacity: 0;
+                                    transition: all 225ms ease-in-out;
+                                    i {
+                                        line-height: 1;
+                                        color: $mainBlue;
+                                        font-size: 30px;
+                                        @include center-align-absolute;
+                                        transition: all 225ms ease-in-out;
+                                    } // &:after {
+                                    //     font-family: 'icomoon' !important;
+                                    //     content: "\e92b";
+                                    //     font-style: normal;
+                                    //     font-weight: normal;
+                                    //     font-variant: normal;
+                                    //     text-transform: none;
+                                    //     line-height: 1;
+                                    //     color: $mainBlue;
+                                    //     font-size: 30px;
+                                    //     @include center-align-absolute;
+                                    // }
+                                    &:after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        z-index: -1;
+                                        transition: all 0.3s;
+                                        transform: translate(-105%, 0);
+                                        transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+                                    }
+                                    &:before {
+                                        content: '';
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        z-index: -1;
+                                        transition: all 0.3s;
+                                        transform: translate(-105%, 0);
+                                        transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+                                        background-color: #fbde17;
+                                    }
+                                    &:after {
+                                        background-color: $mainBlue;
+                                    }
+                                    &:hover {
+                                        color: white;
+                                        i {
+                                            color: white;
+                                        }
+                                        &:after {
+                                            transition-delay: 0.2s;
+                                            transform: translate(0, 0);
+                                        }
+                                        &:before {
+                                            transform: translate(0, 0);
+                                        }
+                                    }
+                                }
+                                img {
+                                    z-index: 3;
+                                    width: 100%;
+                                    transition: all 1225ms ease-in-out;
+                                }
+                            }
+                            .info-box {
+                                padding-top: 10px;
+                                background-color: white;
+                                >div {
+                                    padding: 5px;
+                                    display: grid;
+                                    grid-template-columns: 35px 1fr;
+                                    .icon {
+                                        padding-right: 10px;
+                                        padding-top: 4px;
+                                        font-size: 23px;
+                                        color: $mainBlue;
+                                        line-height: 1;
+                                    }
+                                    .text {
+                                        max-height: 24px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 1;
+                                        -webkit-box-orient: vertical;
+                                        line-height: 2;
+                                    }
+                                    &:first-child {
+                                        i {
+                                            font-size: 18px;
+                                        }
+                                    }
+                                    &:last-child {
+                                        padding: 0px;
+                                        .duration {
+                                            i {
+                                                font-size: 26px;
+                                            }
+                                        }
+                                        .transport {
+                                            i {
+                                                font-size: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .duration-transport {
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr;
+                                    @include breakpoint(768) {
+                                        grid-template-columns: 1fr;
+                                    }
+                                    >div {
+                                        display: grid;
+                                        grid-template-columns: 35px 1fr;
+                                        padding: 5px;
+                                    }
+                                }
+                            }
+                            &:hover {
+                                transform: translate(0px, -5px);
+                                box-shadow: 0px 10px 28px 0px rgba(0, 171, 236, 0.15);
+                                .image {
+                                    .chitiet {
+                                        opacity: 1;
+                                        top: 50%;
+                                    }
+                                    img {
+                                        transform: scale(1.2);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .dulich-nuocngoai-home {
+        margin-top: 150px;
+        .text-col {
+            max-width: 1140px;
+            margin-right: auto;
+            margin-left: auto;
+            >.text {
+                max-width: 600px;
+                margin-left: 165px;
+                span {}
+                &:after {
+                    background-color: $mainYellow;
+                }
+                &:before {
+                    width: 18px;
+                    background-color: $mainBlue;
+                }
+            }
+            @include breakpoint(768) {
+                >.text {
+                    margin-left: 40px;
+                    margin-right: 20px;
+                }
+            }
+        }
+        
+        @include breakpoint(540) {  
+            margin-top: 50px;
+        }
+    } // Tin tuc Home
+    .tintuc-home {
+        margin-top: 20px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        background-color: $ligherGray;
+        >.row {
+            .tintuc-home__container {
+                padding-top: 150px;
+                background: url(../Images/tintuc-bg.png) no-repeat;
+                background-size: 863px auto;
+                background-position: 100% top;
+                position: relative;
+                @include breakpoint(768) {
+                    background-size: 700px auto;
+                }
+                .tintuc-home-text {
+                    font-size: 160px;
+                    font-family: 'din-black';
+                    line-height: 0.8;
+                    text-shadow: -7px 6px 0px white;
+                    z-index: 1;
+                    position: absolute;
+                    letter-spacing: -2px;
+                    right: 0;
+                    top: 12%;
+                    cursor: default;
+                    div {
+                        transition: all 1125ms;
+                    }
+                    .tin {
+                        color: $mainBlue;
+                    }
+                    .tuc {
+                        color: $darkYellow;
+                    }
+                    &:hover {
+                        .tin {
+                            transform: translate(10px, 0);
+                            color: $darkYellow;
+                        }
+                        .tuc {
+                            transform: translate(-10px, 0px);
+                            color: $mainBlue;
+                        }
+                    }
+                    @include breakpoint(992) {
+                        top: 0;
+                    }
+                    @include breakpoint(768) {
+                        font-size: 120px;
+                        right: inherit;
+                        left: 5%;
+                        top: 0;
+                    }
+                }
+                .row {
+                    .tintuc {
+                        .tintuc-wrap {
+                            margin-bottom: 40px;
+                            .image {
+                                transition: all 225ms ease-in-out;
+                                overflow: hidden;
+                                img {
+                                    width: 100%;
+                                    transition: transform 725ms ease-in-out 220ms;
+                                }
+                                &:hover {
+                                    transform: translate(0px, -5px);
+                                    box-shadow: 0px 10px 28px 0px rgba(0, 171, 236, 0.15);
+                                    img {
+                                        transform: scale(1.1);
+                                    }
+                                }
+                            }
+                            .info-box {
+                                background-color: transparent;
+                                padding-top: 25px;
+                                color: $text;
+                                .date {
+                                    margin-top: 20px;
+                                    margin-bottom: 19px;
+                                    display: grid;
+                                    color: $gray;
+                                    grid-template-columns: 35px 1fr;
+                                    .icon {
+                                        padding-right: 10px;
+                                        padding-top: 0;
+                                        font-size: 23px;
+                                        line-height: 1;
+                                        color: $gray;
+                                    }
+                                }
+                                .title {
+                                    font-size: 24px;
+                                    font-family: "din-medium";
+                                    line-height: 1.3;
+                                    max-height: 65px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+                                    a {
+                                        &:hover {
+                                            color: $mainBlue;
+                                        }
+                                    }
+                                }
+                                .detail {
+                                    max-height: 70px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 3;
+                                    -webkit-box-orient: vertical;
+                                }
+                                .chitiet {
+                                    margin-top: 25px;
+                                    a {
+                                        color: $mainBlue;
+                                        i {
+                                            transition: all 225ms ease-in-out;
+                                            margin-left: 10px;
+                                            font-size: 12px;
+                                        }
+                                        &:hover {
+                                            i {
+                                                margin-left: 15px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:hover {
+                                .chitiet {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ykien-khachhang {
+        padding-top: 20px;
+        padding-bottom: 90px;
+        .container {
+            background: url(../Images/ykien-bg.png) no-repeat;
+            background-size: 680px auto;
+            background-position: center top;
+            padding-top: 150px;
+            text-align: center;
+            .title {
+                text-align: center;
+                cursor: default;
+                .line1 {
+                    font-family: 'din-bold';
+                    font-size: 36px;
+                    line-height: 0.8;
+                    z-index: 2;
+                    text-indent: -30px;
+                    transition: all 625ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                }
+                .line2 {
+                    font-family: 'rukola';
+                    font-size: 91px;
+                    line-height: 0.7;
+                    text-indent: 300px;
+                    z-index: 1;
+                    transition: all 825ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                }
+                &:hover {
+                    .line1 {
+                        text-indent: 0px;
+                    }
+                    .line2 {
+                        text-indent: 0px;
+                    }
+                }
+                @include breakpoint(992) {
+                    .line1 {
+                        font-size: 24px;
+                        line-height: 1.6;
+                    }
+                    .line2 {
+                        text-indent: 0px;
+                    }
+                }
+            }
+            .ykien-section {
+                position: relative;
+                .item {
+                    text-align: center;
+                    .avatar {
+                        margin: 30px 0 30px 0;
+                        .image {
+                            transition: all 225ms ease-in-out;
+                            overflow: hidden;
+                            border-radius: 50%;
+                            max-width: 125px;
+                            max-height: 125px;
+                            margin: auto;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .detail {
+                        max-width: 900px;
+                        margin: auto;
+                        .comment {
+                            font-size: 24px;
+                            padding-bottom: 30px;
+                            transition: all 225ms ease-in-out;
+                            span {
+                                max-width: 900px;
+                            }
+                        }
+                        .name {
+                            text-transform: uppercase;
+                            font-family: 'din-medium';
+                            span {
+                                padding-left: 11px;
+                                position: relative;
+                                &:after {
+                                    content: '';
+                                    position: absolute;
+                                    background-color: $text;
+                                    top: 50%;
+                                    left: 0;
+                                    width: 6px;
+                                    height: 1.5px;
+                                }
+                            }
+                        }
+                        @include breakpoint(992) {
+                            .comment {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    &:hover {
+                        .avatar {
+                            .image {
+                                transform: translate(0px, -5px);
+                                box-shadow: 0px 10px 28px -10px rgba(0, 0, 0, 0.25);
+                            }
+                        }
+                        .detail {
+                            .comment {
+                                transform: skew(-7deg);
+                            }
+                        }
+                    }
+                }
+                .slick-dots {
+                    bottom: -80px;
+                    li {
+                        width: 15px;
+                        button {
+                            &:hover,
+                            &:focus {
+                                &:before {
+                                    color: $mainYellow;
+                                }
+                            }
+                            &:before {
+                                color: $gray;
+                                font-size: 8px;
+                                opacity: 0.7;
+                            }
+                        }
+                        &.slick-active button:before {
+                            opacity: 1;
+                            color: $mainBlue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .partner {
+        background-color: $ligherGray;
+        padding: 40px 40px;
+        .container-fluid {
+            .partner-section {
+                >div {
+                    justify-content: center;
+                    .image {
+                        display: flex;
+                        a {
+                            margin: auto;
+                        }
+                        img {
+                            height: 100%;
+                            max-height: 110px;
+                        }
+                    }
+                }
+            }
+            .arrowSlide {
+                color: $gray;
+                cursor: pointer;
+                font-size: 30px;
+                &.left-arrowSlide {
+                    left: -5px;
+                }
+                &.right-arrowSlide {
+                    right: -5px;
+                }
+                &:hover {
+                    color: $mainBlue;
+                }
+                @include breakpoint(768) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    footer {
+        background-color: $lightGray;
+        padding: 70px 0px 60px;
+        .container {
+            .row {
+                >div {
+                    .contain {
+                        .title {
+                            margin-bottom: 20px;
+                            text-transform: uppercase;
+                            font-size: 24px;
+                            font-family: 'din-medium';
+                        }
+                        @include breakpoint(768) {
+                            text-align: center;
+                        }
+                    }
+                }
+                .vechungtoi-footer {
+                    .contain {
+                        @include breakpoint(768) {
+                        }
+                    }
+                }
+                .hinhanh-footer {
+                    .row {
+                        >div {
+                            padding: 3px;
+                            img {
+                                transition: all 225ms ease-in-out;
+                            }
+                            &:hover {
+                                img {
+                                    box-shadow: 0px 5px 15px -5px $mainBlue08;
+                                }
+                            }
+                            &:nth-child(4n-7) {
+                                padding-left: 0;
+                            }
+                            &:nth-child(4n-8) {
+                                padding-right: 0;
+                            }
+                            &:nth-child(-n+4) {
+                                padding-top: 0;
+                            }
+                        }
+                    }
+                    @include breakpoint(768) {
+                        margin-top: 20px;
+                    }
+                }
+                .copyright {
+                    color: $gray;
+                    @include breakpoint(768) {
+                        margin-top: 15px;
+                        text-align: center;
+                    }
+                }
+                .facebook-footer {
+                    .contain {
+                        @include breakpoint(768) {
+                            margin-top: 30px;
+                        }
+                    }
+                    .fb-page {
+                        width: 360px;
+                        height: 135px;
+                        background-color: $gray;
+                    }
+                }
+            }
+        }
+    }
+}

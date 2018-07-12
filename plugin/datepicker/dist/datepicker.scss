@@ -1,0 +1,287 @@
+/*!
+ * Datepicker v1.0.0-beta
+ * https://fengyuanchen.github.io/datepicker
+ *
+ * Copyright 2014-present Chen Fengyuan
+ * Released under the MIT license
+ *
+ * Date: 2018-06-30T09:15:24.612Z
+ */
+
+.datepicker-container {
+    background-color: #fff;
+    direction: ltr;
+    font-size: 12px;
+    left: 0;
+    line-height: 30px;
+    position: fixed;
+    top: 0;
+    -ms-touch-action: none;
+    touch-action: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 238px;
+    z-index: -1;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    &:after,
+    &:before {
+        border: 5px solid transparent;
+        content: " ";
+        display: block;
+        height: 0;
+        position: absolute;
+        width: 0;
+    }
+}
+
+.datepicker-dropdown {
+    border: 5px solid white;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 4px 20px -10px rgba(110, 111, 113, 0.7);
+    box-shadow: 0px 4px 20px -10px rgba(110, 111, 113, 0.7);
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    position: absolute;
+    z-index: 1;
+}
+
+.datepicker-inline {
+    position: static;
+}
+
+.datepicker-top-left,
+.datepicker-top-right {
+    border-top-color: white;
+}
+
+.datepicker-top-left {
+    &:after,
+    &:before {
+        border-top: 0;
+        left: 10px;
+        top: -10px;
+    }
+}
+
+.datepicker-top-right {
+    &:after,
+    &:before {
+        border-top: 0;
+        left: 10px;
+        top: -10px;
+    }
+}
+
+.datepicker-top-left:before,
+.datepicker-top-right:before {
+    border-bottom-color: $mainBlue;
+}
+
+.datepicker-top-left:after,
+.datepicker-top-right:after {
+    border-bottom-color: #fff;
+    top: -10px;
+}
+
+.datepicker-bottom-left,
+.datepicker-bottom-right {
+    border-bottom-color: $mainBlue;
+}
+
+.datepicker-bottom-left {
+    &:after,
+    &:before {
+        border-bottom: 0;
+        bottom: -5px;
+        left: 10px;
+    }
+}
+
+.datepicker-bottom-right {
+    &:after,
+    &:before {
+        border-bottom: 0;
+        bottom: -5px;
+        left: 10px;
+    }
+}
+
+.datepicker-bottom-left:before,
+.datepicker-bottom-right:before {
+    border-top-color: $mainBlue;
+}
+
+.datepicker-bottom-left:after {
+    border-top-color: #fff;
+    bottom: -4px;
+}
+
+.datepicker-bottom-right {
+    &:after {
+        border-top-color: #fff;
+        bottom: -4px;
+        left: auto;
+        right: 10px;
+    }
+    &:before {
+        left: auto;
+        right: 10px;
+    }
+}
+
+.datepicker-top-right {
+    &:after,
+    &:before {
+        left: auto;
+        right: 10px;
+    }
+}
+
+.datepicker-panel {
+    overflow: hidden;
+    >ul {
+        margin: 0;
+        padding: 0;
+        width: 102%;
+        &:after,
+        &:before {
+            content: " ";
+            display: table;
+        }
+        &:after {
+            clear: both;
+        }
+        >li {
+            background-color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            float: left;
+            height: 30px;
+            list-style: none;
+            margin: 2px;
+            padding: 0;
+            text-align: center;
+            width: 30px;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                transition: all 0.3s;
+                transform: translate(-105%, 0);
+                transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                transition: all 0.3s;
+                transform: translate(-105%, 0);
+                transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+                background-color: #fbde17;
+            }
+            &:after {
+                background-color: $mainBlue;
+            }
+            &:hover {
+                background-color: $mainBlue;
+                color: white;
+                &:after {
+                    -webkit-transition-delay: 0.2s;
+                    -o-transition-delay: 0.2s;
+                    transition-delay: 0.2s;
+                    -webkit-transform: translate(0, 0);
+                    -ms-transform: translate(0, 0);
+                    transform: translate(0, 0);
+                }
+                &:before {
+                    -webkit-transform: translate(0, 0);
+                    -ms-transform: translate(0, 0);
+                    transform: translate(0, 0);
+                }
+            }
+            &.muted {
+                color: #c2c2c2;
+                &:hover {
+                    color: white;
+                }
+            }
+            &.highlighted {
+                background-color: rgba(0, 0, 0, 0.05);
+                &:hover {
+                    background-color: $mainBlue;
+                }
+            }
+            &.picked {
+                background-color: $mainBlue;
+                color: white;
+                &:hover {
+                    background-color: $mainBlue;
+                    color: white;
+                }
+            }
+            &.disabled {
+                background-color: #fff;
+                color: #ccc;
+                cursor: default;
+                &:hover {
+                    background-color: #fff;
+                    color: #ccc;
+                    cursor: default;
+                }
+                &.highlighted,
+                &:hover.highlighted {
+                    background-color: #e5f2ff;
+                }
+            }
+            &[data-view="month next"],
+            &[data-view="month prev"],
+            &[data-view=next],
+            &[data-view="year next"],
+            &[data-view="year prev"],
+            &[data-view="years next"],
+            &[data-view="years prev"] {
+                font-size: 18px;
+                line-height: 1.4;
+            }
+            &[data-view="month current"],
+            &[data-view="year current"],
+            &[data-view="years current"] {
+                width: 165px;
+            }
+        }
+        &[data-view=months]>li,
+        &[data-view=years]>li {
+            height: 55.5px;
+            line-height: 52.5px;
+            width: 55.5px;
+        }
+        &[data-view=week]>li {
+            color: $mainBlue;
+            background-color: #fff;
+            cursor: default;
+            &:hover {
+                color: white;
+                background-color: #fff;
+                cursor: default;
+            }
+        }
+    }
+}
+
+.datepicker-hide {
+    display: none;
+}
