@@ -390,7 +390,7 @@ header {
                 z-index: 4;
                 cursor: pointer;
                 content: '';
-                right: -15px;
+                right: -25px;
                 top: 13px;
                 position: absolute;
                 width: 12px;
@@ -424,6 +424,7 @@ header {
                 display: block;
                 text-decoration: none;
                 transition: 115ms;
+                margin-left: -20px;
             }
             &:hover {
                 a {
