@@ -20,7 +20,7 @@
 	<!-- css -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-	<title>>Du lịch trong nước - Vitravel Du lịch khám phá</title>
+	<title>Du lịch trong nước - Vitravel Du lịch khám phá</title>
 
 </head>
 
@@ -320,6 +320,18 @@
 		            }, 700);
 		        });
 		    }
+		});
+
+		$(function ($) {
+		    // Check the initial Poistion of the Sticky Header
+		    var stickyHeaderPCTop = $('.menuPC').offset().top;
+		    $(window).scroll(function () {
+		        if ($(window).scrollTop() > stickyHeaderPCTop) {
+		            $('.nonehtml-alert').addClass("nonehtml-alert-scroll");
+		        } else {
+		            $('.nonehtml-alert').removeClass("nonehtml-alert-scroll");
+		        }
+		    });
 		});
 
 		// Scroll down PC menu custom

@@ -335,6 +335,18 @@
 		    });
 		});
 
+		$(function ($) {
+		    // Check the initial Poistion of the Sticky Header
+		    var stickyHeaderPCTop = $('.menuPC').offset().top;
+		    $(window).scroll(function () {
+		        if ($(window).scrollTop() > stickyHeaderPCTop) {
+		            $('.nonehtml-alert').addClass("nonehtml-alert-scroll");
+		        } else {
+		            $('.nonehtml-alert').removeClass("nonehtml-alert-scroll");
+		        }
+		    });
+		});
+
 		jQuery(document).ready(function ($) {
 		    $(".mainMenuMobile .hasArrow").click(function () {
 		        $(this).find(".arrow").toggleClass("active");
