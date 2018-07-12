@@ -39,7 +39,7 @@ header {
                     }
                     @media (max-width: 1200px) {
                         >li {
-                            padding: 23px 21px;
+                            padding: 23px 19px;
                         }
                         .hasArrow {
                             &:before {
@@ -85,7 +85,7 @@ header {
                 >li {
                     float: left;
                     position: relative;
-                    padding: 38px 32px;
+                    padding: 38px 29px;
                     transition: all 200ms ease-in-out;
                     >a {
                         position: relative;
@@ -209,7 +209,7 @@ header {
                 }
                 @media (max-width: 1200px) {
                     >li {
-                        padding: 38px 17px;
+                        padding: 38px 14px;
                     }
                     .hasArrow {
                         &:before {
