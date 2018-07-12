@@ -204,7 +204,7 @@ jQuery(document).ready(function ($) {
         arrows: true,
         dots: false,
         cssEase: 'ease-in-out',
-        speed: 1800,
+        speed: 800,
         draggable: false,
         prevArrow: '<span class="arrowSlide left-arrowSlide icon-vitravel-arrow-left"></span>',
         nextArrow: '<span class="arrowSlide right-arrowSlide icon-vitravel-arrow-right"></span>',
@@ -323,12 +323,12 @@ $(function ($) {
     });
 });
 
-jQuery(document).ready(function ($) {
-    $('.nonehtml-alert-close').click(function () {
-        $('.nonehtml-alert').css({
-            'overflow' : 'hidden',
-            'opacity' : '0',
-            'padding' : '0',
-         });
+
+// Datepicker
+jQuery(function ($) {
+    $('#datepicker').datepicker({
+        autoHide: true,
+        zIndex: 2048,
+        format: 'dd-mm-yyyy'
     });
 });
