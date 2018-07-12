@@ -622,6 +622,9 @@ textarea {
         @include breakpoint (767) {
             margin-top: -35px;
         }
+        @include breakpoint (540) {
+            margin-top: 25px;
+        }
     }
     @include breakpoint (1600) {
         padding-bottom: 0;
