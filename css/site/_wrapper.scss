@@ -114,6 +114,16 @@
                                         font-size: 64px;
                                     }
                                 }
+                                @include breakpoint(540) {
+                                    width: 100vw;
+                                    padding: 0px 25px;
+                                    .top-description {
+                                        display: none;
+                                    }
+                                    .title {
+                                        font-size: 46px;
+                                    }
+                                }
                             }
                             .image {
                                 filter: blur(3px);
@@ -150,14 +160,17 @@
                                     &:hover,
                                     &:focus {
                                         &:before {
-                                            color: $mainBlue;
+                                            color: $mainYellow;
                                         }
                                     }
                                 }
                                 &.slick-active button:before {
                                     opacity: 1;
-                                    color: $mainYellow;
+                                    color: $mainBlue;
                                 }
+                            }
+                            @include breakpoint(540) {
+                                display: none!important;
                             }
                         }
                         .arrowSlide {
