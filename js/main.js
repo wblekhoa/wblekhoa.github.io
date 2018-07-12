@@ -341,13 +341,13 @@ $(document).ready(function ($) {
 });
 
 // Datepicker
-$(function ($) {
-    $('#datepicker').datepicker({
-        autoHide: true,
-        zIndex: 2048,
-        format: 'dd-mm-yyyy'
-    });
-});
+// $(function ($) {
+//     $('#datepicker').datepicker({
+//         autoHide: true,
+//         zIndex: 2048,
+//         format: 'dd-mm-yyyy'
+//     });
+// });
 
 $(function ($) {
     // Check the initial Poistion of the Sticky Header
@@ -358,14 +358,5 @@ $(function ($) {
         } else {
             $('.nonehtml-alert').removeClass("nonehtml-alert-scroll");
         }
-    });
-});
-
-// Datepicker
-$(function ($) {
-    $('#datepicker').datepicker({
-        autoHide: true,
-        zIndex: 2048,
-        format: 'dd-mm-yyyy'
     });
 });
