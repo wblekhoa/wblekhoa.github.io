@@ -2,7 +2,7 @@
     position: relative;
     #slider {
         position: relative;
-        .sliderhome {
+        .home-slider {
             .container-fluid {
                 .row {
                     position: relative;
@@ -119,9 +119,29 @@
                                 filter: blur(3px);
                                 height: 100vh;
                                 background-repeat: no-repeat;
-                                background-size: cover;
-                                background-position: center center;
+                                background-size: auto 120vh;
+                                background-position: center top;
                                 transition: all 400ms ease-in-out;
+                            }
+                            &.slick-current.slick-active {
+                                .image {
+                                    animation: bgZoomIn 9s linear infinite;
+                                    animation-delay: 1.2s;
+                                }
+                                .text {
+                                    .top-description {
+                                        animation: fadeInDown 1s linear 0.5s;
+                                    }
+                                    .title {
+                                        animation: fadeInLeft 1.5s linear 0.5s;
+                                    }
+                                    .description {
+                                        animation: fadeInUp 1s linear 0.5s;
+                                    }
+                                    .datve {
+                                        animation: fadeInUp 1s linear 0.5s;
+                                    }
+                                }
                             }
                         }
                         .slick-dots {

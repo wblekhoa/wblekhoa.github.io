@@ -615,7 +615,7 @@ textarea {
     padding-bottom: 100px;
     text-align: center;
     img {
-        width: 100%;    
+        width: 100%;
         max-width: 1640px;
         margin: auto;
         margin-top: -5px;
@@ -725,20 +725,18 @@ textarea {
     position: absolute;
     top: calc(50% - 20px);
     left: calc(50% - 20px);
-  }
-  
-  @keyframes loader {
+}
+
+@keyframes loader {
     0% {
-      left: -100px;
+        left: -100px;
     }
-  
     100% {
-      left: 110%;
+        left: 110%;
     }
-  }
-  
-  
-  #box {
+}
+
+#box {
     width: 50px;
     height: 50px;
     background: $mainBlue;
@@ -747,35 +745,30 @@ textarea {
     top: 0;
     left: 0;
     border-radius: 3px;
-  }
-  
-  @keyframes animate {
+}
+
+@keyframes animate {
     17% {
-      border-bottom-right-radius: 3px;
-      background: $mainBlue;
+        border-bottom-right-radius: 3px;
+        background: $mainBlue;
     }
-  
     25% {
-      transform: translateY(9px) rotate(22.5deg);
+        transform: translateY(9px) rotate(22.5deg);
     }
-  
     50% {
-      transform: translateY(18px) scale(1, 0.9) rotate(45deg);
-      border-bottom-right-radius: 40px;
+        transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+        border-bottom-right-radius: 40px;
     }
-  
     75% {
-      transform: translateY(9px) rotate(67.5deg);
-      background: $mainYellow;
+        transform: translateY(9px) rotate(67.5deg);
+        background: $mainYellow;
     }
-  
     100% {
-      transform: translateY(0) rotate(90deg);
+        transform: translateY(0) rotate(90deg);
     }
-  }
-  
-  
-  #shadow {
+}
+
+#shadow {
     width: 50px;
     height: 5px;
     background: #000;
@@ -785,10 +778,19 @@ textarea {
     left: 0;
     border-radius: 50%;
     animation: shadow .5s linear infinite;
-  }
-  
-  @keyframes shadow {
+}
+
+@keyframes shadow {
     50% {
-      transform: scale(1.2, 1);
+        transform: scale(1.2, 1);
     }
-  }
+}
+
+@keyframes bgZoomIn {
+    0% {
+        background-size: auto 120vh;
+    }
+    100% {
+        background-size: auto 100vh;
+    }
+}

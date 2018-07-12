@@ -29,10 +29,10 @@ jQuery(document).ready(function ($) {
 // });
 
 jQuery(document).ready(function ($) {
-    $(".sliderhome .imageSlide .text").hover(function () {
-        $('.sliderhome .image').css("filter", "blur(0px)");
+    $(".home-slider .imageSlide .text").hover(function () {
+        $('.home-slider .image').css("filter", "blur(0px)");
     }, function () {
-        $('.sliderhome .image').css("filter", "blur(3px)");
+        $('.home-slider .image').css("filter", "blur(3px)");
     });
 });
 
@@ -47,7 +47,7 @@ jQuery(document).ready(function ($) {
 // Scroll down PC menu custom
 $(function ($) {
     // Check the initial Poistion of the Sticky Header
-    var stickyHeaderPCTop = $('.menuPC').offset().top;
+    var stickyHeaderPCTop = $('.home-slider .image').height();
     $(window).scroll(function () {
         if ($(window).scrollTop() > stickyHeaderPCTop) {
             $('.menuPC').addClass("stickyMenuPC");
@@ -75,9 +75,9 @@ $(function ($) {
 //         'slow');
 // });
 
-jQuery(document).ready(function ($) {
-    alert($('.sliderhome').height());
-});
+// jQuery(document).ready(function ($) {
+//     alert($('.home-slider .image').height());
+// });
 
 // Scroll down mobile menu custom
 $(function ($) {
@@ -202,16 +202,17 @@ jQuery(document).ready(function ($) {
 
 // Full width home banner
 jQuery(document).ready(function ($) {
-    $('.sliderhome .imageSlide').slick({
+    $('.home-slider .imageSlide').slick({
         autoplay: true,
         autoplaySpeed: 8000,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
         dots: false,
+        pauseOnHover: false,
         cssEase: 'ease-in-out',
-        speed: 800,
         draggable: false,
+        speed: 1000,
         prevArrow: '<span class="arrowSlide left-arrowSlide icon-vitravel-arrow-left"></span>',
         nextArrow: '<span class="arrowSlide right-arrowSlide icon-vitravel-arrow-right"></span>',
         responsive: [{
