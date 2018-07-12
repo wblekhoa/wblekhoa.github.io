@@ -1,19 +1,19 @@
 // Loadding
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
     $(window).on('load', function () {
         $(".loader").fadeOut();
     });
 });
 
 
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
     $(".mainMenuMobile .hasArrow").click(function () {
         $(this).find(".arrow").toggleClass("active");
         $(this).find(".sub-menu").toggleClass("active");
     });
 });
 
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
     $('.mobile-toggle').click(function () {
         $('.mainMenuMobile-wrapper').toggleClass('active');
         $(this).toggleClass('active');
@@ -21,14 +21,14 @@ jQuery(document).ready(function ($) {
 });
 
 // Blur on text banner2 Home
-// jQuery(document).ready(function ($) {
+// $(document).ready(function ($) {
 //     $('.fullWidthBanner .imageSlide .text').hover(
 //         function(){ $('.fullWidthBanner').addClass('blur-image') },
 //         function(){ $('.fullWidthBanner').removeClass('blur-image') }
 //     )
 // });
 
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
     $(".home-slider .imageSlide .text").hover(function () {
         $('.home-slider .image').css("filter", "blur(0px)");
     }, function () {
@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
     });
 });
 
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
     $(".fullWidthBanner .imageSlide .text").hover(function () {
         $('.fullWidthBanner .image').css("filter", "blur(0px)");
     }, function () {
@@ -58,7 +58,7 @@ $(function ($) {
 });
 
 // // click to move to a div mobile menu
-// jQuery(document).ready(function ($) {
+// $(document).ready(function ($) {
 //     $(".mobile-toggle").click(function () {
 //         $('html,body').animate({
 //             scrollTop: $("body").offset().top
@@ -75,7 +75,7 @@ $(function ($) {
 //         'slow');
 // });
 
-// jQuery(document).ready(function ($) {
+// $(document).ready(function ($) {
 //     alert($('.home-slider .image').height());
 // });
 
@@ -106,7 +106,7 @@ $(function ($) {
 });
 
 
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
     if ($('#back-to-top').length) {
         var scrollTrigger = 300,
             backToTop = function () {
@@ -132,7 +132,7 @@ jQuery(document).ready(function ($) {
 
 
 // Slide Home features
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
     $('.features .container .row').slick({
         autoplay: true,
         autoplaySpeed: 3500,
@@ -167,7 +167,7 @@ jQuery(document).ready(function ($) {
 });
 
 // Slide Tour noi bat
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
     $('.tour-noibat .tourSlide .wrap').slick({
         autoplay: true,
         autoplaySpeed: 3500,
@@ -201,7 +201,7 @@ jQuery(document).ready(function ($) {
 });
 
 // Full width home banner
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
     $('.home-slider .imageSlide').slick({
         autoplay: true,
         autoplaySpeed: 8000,
@@ -237,7 +237,7 @@ jQuery(document).ready(function ($) {
 
 
 // Full width home banner
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
     $('.fullWidthBanner .imageSlide').slick({
         autoplay: true,
         autoplaySpeed: 8000,
@@ -271,7 +271,7 @@ jQuery(document).ready(function ($) {
 });
 
 // Y kien khach hang
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
     $('.ykien-khachhang .ykien-section').slick({
         autoplay: true,
         autoplaySpeed: 4000,
@@ -293,7 +293,7 @@ jQuery(document).ready(function ($) {
 });
 
 // Partner
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
     $('.partner .partner-section').slick({
         autoplay: true,
         autoplaySpeed: 3000,
@@ -341,7 +341,7 @@ jQuery(document).ready(function ($) {
 });
 
 // Datepicker
-jQuery(function ($) {
+$(function ($) {
     $('#datepicker').datepicker({
         autoHide: true,
         zIndex: 2048,
@@ -362,7 +362,7 @@ $(function ($) {
 });
 
 // Datepicker
-jQuery(function ($) {
+$(function ($) {
     $('#datepicker').datepicker({
         autoHide: true,
         zIndex: 2048,
