@@ -10,6 +10,7 @@
             width: 100vw !important;
             font-family: 'din-black';
             text-transform: uppercase;
+            border: none!important;
             @include breakpoint (768) {
                 font-size: 50px;
             }
@@ -18,6 +19,7 @@
             font-size: 24px;
             width: 700px;
             max-width: 700px;
+            font-family: 'din';
             line-height: 1.5;
             @include breakpoint (768) {
                 text-align: left;
@@ -37,7 +39,9 @@
             width: 650px;
             font-size: 16px;
             font-weight: 400;
+            font-family: 'din';
             letter-spacing: 3px;
+            text-transform: uppercase;
             @include breakpoint (540) {
                 display: none!important;
             }
@@ -1386,6 +1390,8 @@
                             padding: 3px;
                             img {
                                 transition: all 225ms ease-in-out;
+                                width: 100%;
+                                height: auto;
                             }
                             &:hover {
                                 img {
@@ -1421,9 +1427,7 @@
                         }
                     }
                     .fb-page {
-                        width: 360px;
-                        height: 135px;
-                        background-color: $gray;
+                        background-color: $lightGray;
                     }
                 }
             }
