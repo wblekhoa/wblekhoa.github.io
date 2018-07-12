@@ -48,12 +48,12 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<!-- <div class="loader">
+	<div class="loader">
 		<div id="box-loader">
 			<div id="shadow"></div>
 			<div id="box"></div>
 		</div>
-	</div> -->
+	</div>
 
 	<div class="wrapper">
 		<a href="#" id="back-to-top" title="Back to top"></a>
@@ -167,117 +167,97 @@
 		</div>
 
 		<!-- Slider -->
-		<section id="slider" class="slider-element slider-parallax revslider-wrap full-screen clearfix">
-			<div id="slider-home_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="default-slider" style="padding:0px;">
-				<!-- START REVOLUTION SLIDER 5.1.4 fullscreen mode -->
-				<div id="slider-home" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.1.4">
-					<ul>
-						<!-- SLIDE  -->
-						<li class="dark" data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="Images/nuocNgoai/dubai2.jpg"
-						    data-delay="12000" data-saveperformance="off" data-title="Dubai">
-							<!-- MAIN IMAGE -->
-							<img src="Images/nuocNgoai/dubai2.jpg" alt="kenburns1" data-bgposition="left center" data-kenburns="on" data-duration="12000"
-							    data-ease="Linear.easeNone" data-scalestart="130" data-scaleend="100" data-bgpositionend="right center">
-							<!-- LAYERS -->
+		<section id="slider">
+		<div id="" class="sliderhome">
 
-							<!-- LAYER NR. 2 -->
-							<div class="tp-caption ltl tp-resizeme revo-slider-caps-text uppercase" data-x="340, 150, 70, 30" data-y="240, 80, 20, 0"
-							    data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:600;e:Power4.easeOutQuad;" data-speed="300"
-							    data-start="1000" data-easing="easeOutQuad" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1"
-							    data-endspeed="1000" data-endeasing="Power2.easeIn" style="z-index: 10; color:#FFF; ">Ngỡ ngàng trước sự hiện đại và hoàng tráng của bảo tàng Lourve</div>
+			<div class="container-fluid">
 
-							<div class="tp-caption ltl tp-resizeme revo-slider-emphasis-text nopadding noborder" data-x="340, 150, 70, 30" data-y="260, 100, 40, 35"
-							    data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:600;e:Power4.easeOutQuad;" data-speed="300"
-							    data-start="1200" data-easing="easeOutQuad" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1"
-							    data-endspeed="1000" data-endeasing="Power4.easeIn" style="z-index: 10; color:#FFF; ">Abu Dhabi - Dubai</div>
+				<div class="row">
 
-							<div class="tp-caption ltl tp-resizeme revo-slider-desc-text " data-x="340, 150, 70, 30" data-y="380, 220, 130, 130" data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:600;e:Power4.easeOutQuad;"
-							    data-speed="300" data-start="1400" data-easing="easeOutQuad" data-splitin="none" data-splitout="none" data-elementdelay="0.01"
-							    data-endelementdelay="0.1" data-endspeed="1000" data-endeasing="Power4.easeIn" style="z-index: 10; white-space: normal; color:#FFF;">Khám phá hành trình Dubai với những trải nghiệm theo chuẩn mực xa hoa tại xứ nghìn lẻ một đêm của các Tiểu vương quốc
-								Ả Rập Thống Nhất U.A.E</div>
+					<!-- <div class="overlayTexture">
+						<div class="wrap">
+							<div class="image" style=""></div>
+						</div>
+					</div> -->
 
-							<div class="tp-caption ltl tp-resizeme" data-x="340, 150, 70, 30" data-y="530, 355, 240, 240" data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:600;e:Power4.easeOutQuad;"
-							    data-speed="300" data-start="1550" data-easing="easeOutQuad" data-splitin="none" data-splitout="none" data-elementdelay="0.01"
-							    data-endelementdelay="0.1" data-endspeed="1000" data-endeasing="Power4.easeIn" style="z-index: 10; color:#FFF;">
-								<a href="#" class="button buttonStyle2">
-									<span>Đặt vé</span>
-									<i class="icon-vitravel-arrow-right icon"></i>
-								</a>
+					<div class="overlay-right overlay" style="background-image: url(Images/overlay-right.png)"></div>
+
+					<div class="overlay-left overlay" style="background-image: url(Images/overlay-left.png)"></div>
+
+					<div class="imageSlide wow fadeInLeft" data-wow-delay="1s">
+						<div class="item">
+							<div class="wrap">
+								<div class="text">
+									<div class="top-description">
+										<span>Trải nghiệm dịch vụ 4 sao của hãng hàng không Bangkok Airway</span>
+									</div>
+									<div class="title">
+										<span>Du lịch Thái Lan</span>
+									</div>
+									<div class="description">
+										<span>Safari World là điểm tham quan hấp dẫn mà du khách không thể bỏ qua trong các chuyến du lịch đến xứ sở chùa Vàng.
+											Đây là vườn thú mở tự nhiên lớn nhất Châu Á bao gồm: Vườn thú hoang dã ngoài trời và Khu vui chơi giải trí.</span>
+									</div>
+									<a href="tour-nuoc-ngoai-chi-tiet.html" class="button buttonStyle3 datve">
+										<span>Chi tiết</span>
+										<i class="icon-vitravel-arrow-right"></i>
+									</a>
+								</div>
+								<div class="image" style="background-image: url(Images/nuocNgoai/thai-banner.jpg)">
+								</div>
 							</div>
-
-						</li>
-						<!-- SLIDE  -->
-						<li data-transition="slidedown" data-slotamount="1" data-masterspeed="1500" data-thumb="Images/nuocNgoai/greatWall2.jpg"
-						    data-delay="10000" data-saveperformance="off" data-title="Trường thành">
-							<!-- MAIN IMAGE -->
-							<img src="Images/nuocNgoai/greatWall2.jpg" alt="kenburns6" data-bgposition="center top" data-kenburns="on" data-duration="10000"
-							    data-ease="Linear.easeNone" data-scalestart="120" data-scaleend="100" data-bgpositionend="center center">
-							<!-- LAYERS -->
-
-							<!-- LAYER NR. 2 -->
-							<div class="tp-caption ltl tp-resizeme revo-slider-caps-text uppercase " data-x="340, 150, 70, 30" data-y="240, 80, 20, 0"
-							    data-transform_in="x:250;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:600;e:Power4.easeOutQuad;" data-speed="300"
-							    data-start="1000" data-easing="easeOutQuad" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1"
-							    data-endspeed="1000" data-endeasing="Power4.easeIn" style="z-index: 10; color: #FFF;">Hành trình độc đáo mang đến những trải nghiệm lý thú</div>
-
-							<div class="tp-caption ltl tp-resizeme revo-slider-emphasis-text nopadding noborder" data-x="340, 150, 70, 30" data-y="260, 100, 40, 35"
-							    data-transform_in="x:250;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:600;e:Power4.easeOutQuad;" data-speed="300"
-							    data-start="1200" data-easing="easeOutQuad" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1"
-							    data-endspeed="1000" data-endeasing="Power4.easeIn" style="z-index: 10; color: #FFF;">Trung Quốc</div>
-
-							<div class="tp-caption ltl tp-resizeme revo-slider-desc-text " data-x="340, 150, 70, 30" data-y="380, 220, 130, 130" data-transform_in="x:250;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:600;e:Power4.easeOutQuad;"
-							    data-speed="300" data-start="1400" data-easing="easeOutQuad" data-splitin="none" data-splitout="none" data-elementdelay="0.01"
-							    data-endelementdelay="0.1" data-endspeed="1000" data-endeasing="Power4.easeIn" style="z-index: 10; color: #FFF; ; white-space: normal;">Thưởng ngoạn nhiều danh lam thắng cảnh và di tích nổi tiếng tại Bắc Kinh: Vạn Lý Trường Thành, Di Hoà Viên, Quảng
-								trường Thiên An Môn, Thập Tam Lăng…</div>
-
-							<div class="tp-caption ltl tp-resizeme" data-x="340, 150, 70, 30" data-y="530, 355, 240, 240" data-transform_in="x:250;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:600;e:Power4.easeOutQuad;"
-							    data-speed="300" data-start="1550" data-easing="easeOutQuad" data-splitin="none" data-splitout="none" data-elementdelay="0.01"
-							    data-endelementdelay="0.1" data-endspeed="1000" data-endeasing="Power4.easeIn" style="z-index: 10;">
-								<a href="#" class="button buttonStyle2">
-									<span>Đặt vé</span>
-									<i class="icon-vitravel-arrow-right icon"></i>
-								</a>
+						</div>
+						<div class="item">
+							<div class="wrap">
+								<div class="text">
+									<div class="top-description">
+										<span>Tiểu vương quốc Ả Rập Thống Nhất U.A.E</span>
+									</div>
+									<div class="title">
+										<span>Du lịch Dubai</span>
+									</div>
+									<div class="description">
+										<span>Thỏa sức khám phá sa mạc Safari bằng xe địa hình và thưởng thức BBQ trong ánh nến dưới trời sao lung linh, xem
+											màn múa bụng đặc sắc do các vũ công tài năng biểu diễn.</span>
+									</div>
+									<a href="tour-nuoc-ngoai-chi-tiet.html" class="button buttonStyle3 datve">
+										<span>Chi tiết</span>
+										<i class="icon-vitravel-arrow-right"></i>
+									</a>
+								</div>
+								<div class="image" style="background-image: url(Images/nuocNgoai/dubai-banner.jpg)">
+								</div>
 							</div>
-
-						</li>
-						<!-- SLIDE  -->
-						<li class="dark" data-transition="slideleft" data-slotamount="1" data-masterspeed="1500" data-thumb="Images/trongNuoc/sapa2.jpg"
-						    data-delay="12000" data-saveperformance="off" data-title="Sapa">
-							<!-- MAIN IMAGE -->
-							<img src="Images/trongNuoc/sapa2.jpg" alt="kenburns3" data-bgposition="left top" data-kenburns="on" data-duration="12000"
-							    data-ease="Linear.easeNone" data-scalestart="130" data-scaleend="100" data-bgpositionend="right bottom">
-							<!-- LAYERS -->
-
-							<!-- LAYER NR. 1 -->
-							<div class="tp-caption ltl tp-resizeme revo-slider-caps-text uppercase" data-x="340, 150, 70, 30" data-y="240, 80, 20, 0"
-							    data-transform_in="x:-150;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:600;e:Power4.easeOutQuad;" data-speed="300"
-							    data-start="1000" data-easing="easeOutQuad" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1"
-							    data-endspeed="1000" data-endeasing="Power4.easeIn" style="z-index: 10;">Tìm hiểu đời sống dân tộc thiểu số</div>
-
-							<div class="tp-caption ltl tp-resizeme revo-slider-emphasis-text nopadding noborder" data-x="340, 150, 70, 30" data-y="260, 100, 40, 35"
-							    data-transform_in="x:-150;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:600;e:Power4.easeOutQuad;" data-speed="300"
-							    data-start="1200" data-easing="easeOutQuad" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.1"
-							    data-endspeed="1000" data-endeasing="Power4.easeIn" style="z-index: 10;">Sapa</div>
-
-							<div class="tp-caption ltl tp-resizeme revo-slider-desc-text" data-x="340, 150, 70, 30" data-y="380, 220, 130, 130" data-transform_in="x:-150;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:600;e:Power4.easeOutQuad;"
-							    data-speed="300" data-start="1400" data-easing="easeOutQuad" data-splitin="none" data-splitout="none" data-elementdelay="0.06"
-							    data-endelementdelay="0.1" data-endspeed="1000" data-endeasing="Power4.easeIn" style="z-index: 10; ; white-space: normal; text-align:center;">Ngắm toàn cảnh Sapa và Nóc nhà Đông Dương. Đỉnh Fansipan tại sân mây. Tìm hiểu đời sống dân tộc thiểu số tại bản Tả
-								Phìn
+						</div>
+						<div class="item">
+							<div class="wrap">
+								<div class="text">
+									<div class="top-description">
+										<span>Thưởng thức món vịt quay “chính hiệu Bắc Kinh”</span>
+									</div>
+									<div class="title">
+										<span>Du lịch Trung Quốc</span>
+									</div>
+									<div class="description">
+										<span>Thưởng ngoạn nhiều danh lam thắng cảnh và di tích nổi tiếng tại Bắc Kinh: Vạn Lý Trường Thành, Di Hoà Viên, Quảng
+											trường Thiên An Môn, Thập Tam Lăng…</span>
+									</div>
+									<a href="tour-nuoc-ngoai-chi-tiet.html" class="button buttonStyle3 datve">
+										<span>Chi tiết</span>
+										<i class="icon-vitravel-arrow-right"></i>
+									</a>
+								</div>
+								<div class="image" style="background-image: url(Images/nuocNgoai/greatwall-banner.jpg)">
+								</div>
 							</div>
-
-							<div class="tp-caption ltl tp-resizeme" data-x="340, 150, 70, 30" data-y="530, 355, 240, 240" data-transform_in="x:-150;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:600;e:Power4.easeOutQuad;"
-							    data-speed="300" data-start="1550" data-easing="easeOutQuad" data-splitin="none" data-splitout="none" data-elementdelay="0.01"
-							    data-endelementdelay="0.1" data-endspeed="1000" data-endeasing="Power4.easeIn" style="z-index: 10;">
-								<a href="#" class="button buttonStyle1" style="height:45px">
-									<span>Start Now</span>
-									<i class="icon-vitravel-arrow-right icon"></i>
-								</a>
-							</div>
-						</li>
-					</ul>
+						</div>
+					</div>
 				</div>
+
 			</div>
-			<div class="search-home wow fadeInUp" data-wow-delay="2s">
+
+		</div>
+			<div class="search-home" >
 				<div class="container-fluid">
 					<div class="row">
 						<div class="search-bar">

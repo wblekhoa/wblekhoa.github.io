@@ -2,96 +2,161 @@
     position: relative;
     #slider {
         position: relative;
-        .revo-slider-emphasis-text {
-            font-size: 70px;
-            letter-spacing: -1px;
-            border-top: 2px solid #FFF;
-            border-bottom: 2px solid #FFF;
-            width: 100vw !important;
-            font-family: 'din-black';
-            text-transform: uppercase;
-            border: none!important;
-            @include breakpoint (768) {
-                font-size: 50px;
-            }
-        }
-        .revo-slider-desc-text {
-            font-size: 24px;
-            width: 700px;
-            max-width: 700px;
-            font-family: 'din';
-            line-height: 1.5;
-            @include breakpoint (768) {
-                text-align: left;
-                max-height: 75px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-            }
-            @include breakpoint (540) {
-                width: 500px;
-                max-width: 500px;
-            }
-        }
-        .revo-slider-caps-text {
-            width: 650px;
-            font-size: 16px;
-            font-weight: 400;
-            font-family: 'din';
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            @include breakpoint (540) {
-                display: none!important;
-            }
-        }
-        .tp-video-play-button {
-            display: none !important;
-        }
-        .tp-caption {
-            white-space: nowrap;
-        }
-        .tp-thumb {
-            border: 3px solid white;
-            opacity: 0.7 !important;
-        }
-        .tp-thumbs {
-            @include breakpoint(992) {
-                display: none !important;
-            }
-        }
-        .tp-thumb.selected {
-            opacity: 1 !important;
-        }
-        .tp-bannertimer {
-            background: $mainBlue;
-        }
-        .button {
-            height: 50px !important;
-            padding: 0px 25px 0px 30px !important;
-            font-size: 18px !important;
-            line-height: 42px !important;
-            @include breakpoint (768) {
-                height: 40px !important;
-                line-height: 32px !important;
-            }
-        }
-        a.button {
-            z-index: 10;
-            border: 2px solid $mainBlue;
-            background-color: transparent;
-            transition: all 125ms ease-in-out !important;
-            &:hover {
-                background-color: $mainBlue;
-                color: white;
-                .icon {
-                    margin-left: 15px !important;
-                    transition: all 125ms ease-in-out !important;
+        .sliderhome {
+            .container-fluid {
+                .row {
+                    position: relative;
+                    .overlay {
+                        background-repeat: no-repeat;
+                        left: inherit;
+                        top: inherit;
+                        background-size: auto 100%;
+                    }
+                    .overlay-top {
+                        position: absolute;
+                        top: 0;
+                        z-index: 8;
+                        width: 100%;
+                        height: 247px;
+                    }
+                    .overlay-right {
+                        position: absolute;
+                        background-position: right center;
+                        top: 0;
+                        right: 0;
+                        z-index: 8;
+                        width: 470px;
+                        height: 100%;
+                        @include breakpoint(1200) {
+                            display: none;
+                            background-image: none !important;
+                        }
+                    }
+                    .overlay-bot {
+                        position: absolute;
+                        background-position: center bottom;
+                        bottom: -10px;
+                        z-index: 8;
+                        width: 100%;
+                        height: 247px;
+                    }
+                    .overlay-left {
+                        position: absolute;
+                        background-position: left center;
+                        top: 0;
+                        left: 0;
+                        z-index: 8;
+                        width: 470px;
+                        height: 100%;
+                        @include breakpoint(1200) {
+                            display: none;
+                            background-image: none !important;
+                        }
+                    }
+                    .imageSlide {
+                        width: 100%;
+                        .item {
+                            position: relative;
+                            .text {
+                                cursor: default;
+                                z-index: 20;
+                                @include center-align-absolute;
+                                top: 44%;
+                                text-align: center;
+                                color: white;
+                                max-width: 1000px;
+                                .top-description {
+                                    margin: auto;
+                                    color: white;
+                                    line-height: 1.4;
+                                    margin-bottom: 18px;
+                                    max-width: 640px;
+                                    max-height: 45px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 6;
+                                    -webkit-box-orient: vertical;
+                                }
+                                .title {
+                                    margin: auto;
+                                    font-family: 'rukola';
+                                    font-size: 100px;
+                                    color: white;
+                                    line-height: 1;
+                                }
+                                .description {
+                                    margin: auto;
+                                    color: white;
+                                    max-width: 640px;
+                                    max-height: 145px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 6;
+                                    -webkit-box-orient: vertical;
+                                }
+                                .datve {
+                                    z-index: 20;
+                                    margin-top: 30px;
+                                    border-color: $mainBlue;
+                                    &:before {
+                                        background-color: $mainYellow;
+                                    }
+                                    &:after {
+                                        background-color: $mainBlue;
+                                    }
+                                }
+                                @include breakpoint(768) {
+                                    width: 100vw;
+                                    padding: 0px 25px;
+                                    .title {
+                                        font-size: 64px;
+                                    }
+                                }
+                            }
+                            .image {
+                                filter: blur(3px);
+                                height: 100vh;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-position: center center;
+                                transition: all 400ms ease-in-out;
+                            }
+                        }
+                        .slick-dots {
+                            li {
+                                button {
+                                    &:hover,
+                                    &:focus {
+                                        &:before {
+                                            color: $mainBlue;
+                                        }
+                                    }
+                                }
+                                &.slick-active button:before {
+                                    opacity: 1;
+                                    color: $mainYellow;
+                                }
+                            }
+                        }
+                        .arrowSlide {
+                            color: white;
+                            font-size: 45px;
+                            z-index: 15;
+                            top: 40%;
+                            &.left-arrowSlide {
+                                left: 12vw;
+                            }
+                            &.right-arrowSlide {
+                                right: 12vw;
+                            }
+                            &:hover {
+                                color: $mainBlue;
+                            }
+                        }
+                    }
                 }
-            }
-            .icon {
-                margin-left: 5px !important;
             }
         }
         .search-home {
@@ -783,7 +848,9 @@
                 }
             }
         }
-    } // Du lich trong nuoc - home3 - Du lich nuoc ngoai - home4
+    }
+    
+    // Du lich trong nuoc - home3 - Du lich nuoc ngoai - home4
     .dulich-trongnuoc-home,
     .dulich-nuocngoai-home {
         margin-top: 50px;
