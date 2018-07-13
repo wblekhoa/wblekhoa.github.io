@@ -519,7 +519,9 @@ textarea {
     margin: 0;
     overflow: hidden;
     border-radius: 5px;
-    background-color: $mainYellow;
+    &:hover {
+        background-color: $mainYellow;
+    }
     &:before {
         background-color: $mainBlue;
     }
