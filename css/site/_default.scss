@@ -430,13 +430,12 @@ textarea {
     outline: none;
     white-space: nowrap;
     margin: 5px;
-    padding: 0 22px;
+    padding: 15px 22px;
     font-size: 14px;
-    height: 40px;
     background-color: white;
     color: #FFF;
     font-weight: 700;
-    line-height: 40px;
+    line-height: 1;
     text-transform: uppercase;
     letter-spacing: 1px;
     border: none;
@@ -497,7 +496,6 @@ textarea {
 }
 
 .buttonStyle2 {
-    height: 45px;
     z-index: 2;
     background-color: white;
     color: white;
@@ -510,7 +508,6 @@ textarea {
 }
 
 .buttonStyle3 {
-    height: 45px;
     z-index: 2;
     border: 2px solid $mainYellow;
     background-color: transparent;
@@ -522,6 +519,7 @@ textarea {
     margin: 0;
     overflow: hidden;
     border-radius: 5px;
+    background-color: $mainYellow;
     &:before {
         background-color: $mainBlue;
     }
