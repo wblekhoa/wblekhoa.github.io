@@ -129,8 +129,8 @@
                                 filter: blur(3px);
                                 height: 100vh;
                                 background-repeat: no-repeat;
-                                background-size: auto 120vh;
-                                background-position: center top;
+                                background-size: auto 105vh;
+                                background-position: left top;
                                 transition: all 400ms ease-in-out;
                             }
                             &.slick-current.slick-active {
@@ -1155,6 +1155,7 @@
                 background-position: 100% top;
                 position: relative;
                 @include breakpoint(768) {
+                    background-position: left top;
                     background-size: 700px auto;
                 }
                 .tintuc-home-text {
@@ -1293,6 +1294,9 @@
             background-position: center top;
             padding-top: 150px;
             text-align: center;
+            @include breakpoint(768) {
+                background-position: left top;
+            }
             .title {
                 text-align: center;
                 cursor: default;

@@ -400,7 +400,19 @@ textarea {
         transition: 200ms ease-in-out;
     }
     @include breakpoint(768) {
-        display: none;
+        width: 40px;
+        height: 40px;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+        border-top-left-radius: 50%;
+        &:before {
+            top: 19px;
+            left: 17px;
+        }
+        &:hover {
+            bottom: 0px;
+        }
     }
 }
 
@@ -788,7 +800,7 @@ textarea {
 
 @keyframes bgZoomIn {
     0% {
-        background-size: auto 120vh;
+        background-size: auto 105vh;
     }
     100% {
         background-size: auto 100vh;
