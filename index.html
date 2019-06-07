@@ -4,19 +4,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="Images/logo.png">
+	<link rel="icon" href="Images/logoicon.png">
 	<meta name="author" content="JAKStudio" />
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="plugin/bootstrap4/css/bootstrap.min.css">
-	
+
 	<!-- icomoonVitravel -->
 	<link rel="stylesheet" type="text/css" href="plugin/icomoonVitravel/style.css">
-
-	<!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
-	<link rel="stylesheet" type="text/css" href="plugin/rs-plugin/css/settings.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="plugin/rs-plugin/css/layers.css">
-	<link rel="stylesheet" type="text/css" href="plugin/rs-plugin/css/navigation.css">
 
 	<!-- Slick -->
 	<link rel="stylesheet" type="text/css" href="plugin/slick/slick/slick.css" />
@@ -25,13 +20,26 @@
 	<!-- wow -->
 	<link rel="stylesheet" href="plugin/wow/css/libs/animate.css">
 
-	<!-- Datepicker -->
-	<!-- <link href="plugin/datepicker/dist/datepicker.css" rel="stylesheet" type="text/css" /> -->
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="plugin/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+	<!-- Optionally add helpers - button, thumbnail and/or media -->
+	<link rel="stylesheet" href="plugin/fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="plugin/fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen"/>
 
 	<!-- css -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<title>Vitravel - Du lịch khám phá</title>
+
+	<style>
+		.tintuc-home__container::before {
+			content: "Tin tức"
+		}
+
+		.ykien-khachhang .container::before {
+			content: "Ý kiến"
+		}
+	</style>
 
 </head>
 
@@ -55,7 +63,7 @@
 		</div>
 	</div>
 
-	<div class="wrapper">
+	<div class="wrapper home">
 		<a href="#" id="back-to-top" title="Back to top"></a>
 
 		<!-- Menu mobile -->
@@ -75,7 +83,7 @@
 				<div class="mobile-nav">
 					<div class="logo_mobile">
 						<a class="" href="index.html">
-							<img src="Images/logo2.png" alt="">
+							<img class="lazy" src="Images/logo2.png" alt="">
 						</a>
 					</div>
 				</div>
@@ -88,18 +96,18 @@
 				<li class="">
 					<a href="index.html">Trang chủ</a>
 				</li>
-				<li class="hasArrow nonelink">
+				<li class="hasArrow">
 					<a href="tour-trong-nuoc.html">Tour trong nước</a>
 					<span class="arrow"></span>
 					<ul class="sub-menu">
 						<li>
-							<a href="nonemien-bac">Miền Bắc</a>
+							<a href="tour-mien-bac.html">Miền Bắc</a>
 						</li>
 						<li>
-							<a href="nonemien-trung">Miền Trung</a>
+							<a href="tour-mien-trung.html">Miền Trung</a>
 						</li>
 						<li>
-							<a href="nonemien-nam">Miền Nam</a>
+							<a href="tour-mien-nam.html">Miền Nam</a>
 						</li>
 					</ul>
 				</li>
@@ -108,19 +116,19 @@
 					<span class="arrow"></span>
 					<ul class="sub-menu">
 						<li>
-							<a href="chau-a">Châu Á</a>
+							<a href="tour-chau-a.html">Châu Á</a>
 						</li>
 						<li>
-							<a href="chau-au">Châu Âu</a>
+							<a href="tour-chau-au.html">Châu Âu</a>
 						</li>
 						<li>
-							<a href="chau-my">Châu Mỹ</a>
+							<a href="tour-chau-my.html">Châu Mỹ</a>
 						</li>
 						<li>
-							<a href="chau-phi">Châu Phi</a>
+							<a href="tour-chau-phi.html">Châu Phi</a>
 						</li>
 						<li>
-							<a href="chau-dai-duong">Châu Đại Dương</a>
+							<a href="tour-chau-dai-duong.html">Châu Đại Dương</a>
 						</li>
 					</ul>
 				</li>
@@ -168,95 +176,97 @@
 
 		<!-- Slider -->
 		<section id="slider">
-		<div id="" class="home-slider">
+			<div id="" class="home-slider">
 
-			<div class="container-fluid">
+				<div class="container-fluid">
 
-				<div class="row">
+					<div class="row">
 
-					<!-- <div class="overlayTexture">
+						<!-- <div class="overlayTexture">
 						<div class="wrap">
 							<div class="image" style=""></div>
 						</div>
 					</div> -->
-					
-					<div class="overlay-right overlay" style="background-image: url(Images/overlay-right.png)"></div>
 
-					<div class="overlay-left overlay" style="background-image: url(Images/overlay-left.png)"></div>
+						<div class="overlay-right overlay" style="background-image: url(Images/overlay-right.png)"></div>
 
-					<div class="imageSlide wow fadeInLeft" data-wow-delay="1s">
-						<div class="item">
-							<div class="wrap">
-								<div class="text">
-									<div class="title">
-										<span>Sapa</span>
+						<div class="overlay-left overlay" style="background-image: url(Images/overlay-left.png)"></div>
+
+						<div class="imageSlide wow fadeInLeft" data-wow-delay="1s">
+							<div class="item">
+								<div class="wrap">
+									<div class="text">
+										<div class="title">
+											<span>Sapa</span>
+										</div>
+										<div class="top-description">
+											<span>Tìm hiểu đời sống dân tộc thiểu số</span>
+										</div>
+										<div class="description">
+											<span>Ngắm toàn cảnh Sapa và Nóc nhà Đông Dương. Đỉnh Fansipan tại sân mây. Tìm hiểu đời sống dân tộc thiểu số tại bản
+												Tả Phìn
+											</span>
+										</div>
+										<a href="tour-nuoc-ngoai-chi-tiet.html" class="button buttonStyle3 datve">
+											<span>Đặt vé</span>
+											<i class="icon-vitravel-arrow-right"></i>
+										</a>
 									</div>
-									<div class="top-description">
-										<span>Tìm hiểu đời sống dân tộc thiểu số</span>
+									<div class="image" style="background-image: url(Images/trongNuoc/sapa2.jpg)">
 									</div>
-									<div class="description">
-										<span>Ngắm toàn cảnh Sapa và Nóc nhà Đông Dương. Đỉnh Fansipan tại sân mây. Tìm hiểu đời sống dân tộc thiểu số tại bản Tả
-											Phìn</span>
-									</div>
-									<a href="tour-nuoc-ngoai-chi-tiet.html" class="button buttonStyle3 datve">
-										<span>Đặt vé</span>
-										<i class="icon-vitravel-arrow-right"></i>
-									</a>
-								</div>
-								<div class="image" style="background-image: url(Images/trongNuoc/sapa2.jpg)">
 								</div>
 							</div>
-						</div>
-						<div class="item">
-							<div class="wrap">
-								<div class="text">
-									<div class="title">
-										<span>Abu Dhabi - Dubai</span>
+							<div class="item">
+								<div class="wrap">
+									<div class="text">
+										<div class="title">
+											<span>Abu Dhabi - Dubai</span>
+										</div>
+										<div class="top-description">
+											<span>Ngỡ ngàng trước sự hiện đại và hoàng tráng của bảo tàng Lourve</span>
+										</div>
+										<div class="description">
+											<span>Khám phá hành trình Dubai với những trải nghiệm theo chuẩn mực xa hoa tại xứ nghìn lẻ một đêm của các Tiểu vương
+												quốc Ả Rập Thống Nhất U.A.E</span>
+										</div>
+										<a href="tour-nuoc-ngoai-chi-tiet.html" class="button buttonStyle3 datve">
+											<span>Đặt vé</span>
+											<i class="icon-vitravel-arrow-right"></i>
+										</a>
 									</div>
-									<div class="top-description">
-										<span>Ngỡ ngàng trước sự hiện đại và hoàng tráng của bảo tàng Lourve</span>
+									<div class="image" style="background-image: url(Images/nuocNgoai/dubai-banner.jpg)">
 									</div>
-									<div class="description">
-										<span>Khám phá hành trình Dubai với những trải nghiệm theo chuẩn mực xa hoa tại xứ nghìn lẻ một đêm của các Tiểu vương quốc
-											Ả Rập Thống Nhất U.A.E</span>
-									</div>
-									<a href="tour-nuoc-ngoai-chi-tiet.html" class="button buttonStyle3 datve">
-										<span>Đặt vé</span>
-										<i class="icon-vitravel-arrow-right"></i>
-									</a>
-								</div>
-								<div class="image" style="background-image: url(Images/nuocNgoai/dubai-banner.jpg)">
 								</div>
 							</div>
-						</div>
-						<div class="item">
-							<div class="wrap">
-								<div class="text">
-									<div class="title">
-										<span>Đà Lạt</span>
+							<div class="item">
+								<div class="wrap">
+									<div class="text">
+										<div class="title">
+											<span>Đà Lạt</span>
+										</div>
+										<div class="top-description">
+											<span>Thành phố ngàn hoa</span>
+										</div>
+										<div class="description">
+											<span>Tận hưởng khí hậu ôn hòa và dịu mát nơi thành phố vùng cao nguyên - thiên đường của các loại hoa, các loại rau
+												quả tươi bốn mùa và những khu rừng thông xanh mát</span>
+										</div>
+										<a href="tour-nuoc-ngoai-chi-tiet.html" class="button buttonStyle3 datve">
+											<span>Đặt vé</span>
+											<i class="icon-vitravel-arrow-right"></i>
+										</a>
 									</div>
-									<div class="top-description">
-										<span>Thành phố ngàn hoa</span>
+									<div class="image" style="background-image: url(Images/trongNuoc/dalat2.jpg)">
 									</div>
-									<div class="description">
-										<span>Tận hưởng khí hậu ôn hòa và dịu mát nơi thành phố vùng cao nguyên - thiên đường của các loại hoa, các loại rau quả tươi bốn mùa và những khu rừng thông xanh mát</span>
-									</div>
-									<a href="tour-nuoc-ngoai-chi-tiet.html" class="button buttonStyle3 datve">
-										<span>Đặt vé</span>
-										<i class="icon-vitravel-arrow-right"></i>
-									</a>
-								</div>
-								<div class="image" style="background-image: url(Images/trongNuoc/dalat2.jpg)">
 								</div>
 							</div>
 						</div>
 					</div>
+
 				</div>
 
 			</div>
-
-		</div>
-			<div class="search-home" >
+			<div class="search-home">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="search-bar">
@@ -313,44 +323,44 @@
 								<li class="active">
 									<a href="index.html">Trang chủ</a>
 								</li>
-								<li class="hasArrow nonelink">
+								<li class="hasArrow">
 									<a href="tour-trong-nuoc.html">Tour trong nước</a>
 									<ul class="sub-menu">
 										<li>
-											<a href="nonemien-bac">Miền Bắc</a>
+											<a href="tour-mien-bac.html">Miền Bắc</a>
 										</li>
 										<li>
-											<a href="nonemien-trung">Miền Trung</a>
+											<a href="tour-mien-trung.html">Miền Trung</a>
 										</li>
 										<li>
-											<a href="nonemien-nam">Miền Nam</a>
+											<a href="tour-mien-nam.html">Miền Nam</a>
 										</li>
 									</ul>
 								</li>
-								<li class="hasArrow nonelink">
+								<li class="hasArrow">
 									<a href="tour-nuoc-ngoai.html">Tour nước ngoài</a>
 									<ul class="sub-menu">
 										<li>
-											<a href="nonechau-a">Châu Á</a>
+											<a href="tour-chau-a.html">Châu Á</a>
 										</li>
 										<li>
-											<a href="nonechau-au">Châu Âu</a>
+											<a href="tour-chau-au.html">Châu Âu</a>
 										</li>
 										<li>
-											<a href="nonechau-my">Châu Mỹ</a>
+											<a href="tour-chau-my.html">Châu Mỹ</a>
 										</li>
 										<li>
-											<a href="nonechau-phi">Châu Phi</a>
+											<a href="tour-chau-phi.html">Châu Phi</a>
 										</li>
 										<li>
-											<a href="nonechau-dai-duong">Châu Đại Dương</a>
+											<a href="tour-chau-dai-duong.html">Châu Đại Dương</a>
 										</li>
 									</ul>
 
 								</li>
 								<li class="logo">
 									<a href="index.html">
-										<img src="Images/logo2.png" alt="" />
+										<img class="lazy" src="Images/logo2.png" alt="" />
 									</a>
 								</li>
 								<li class="hasArrow nonelink">
@@ -450,7 +460,7 @@
 
 				<div class="row">
 					<div class="image wow fadeInLeft">
-						<img src="Images/tour-noibat.jpg" alt="">
+						<img class="lazy" src="Images/tour-noibat.jpg" alt="">
 					</div>
 					<div class="contain">
 						<div class="description wow fadeInUp">
@@ -463,7 +473,7 @@
 									<div class="image-tourSlide">
 										<a href="tour-nuoc-ngoai-chi-tiet.html">
 											<div class="image">
-												<img src="Images/nuocNgoai/dubai-tour.jpg" alt="">
+												<img class="lazy" src="Images/nuocNgoai/dubai-tour.jpg" alt="">
 
 											</div>
 											<div class="info">
@@ -503,7 +513,7 @@
 									<div class="image-tourSlide">
 										<a href="tour-trong-nuoc-chi-tiet.html">
 											<div class="image">
-												<img src="Images/trongNuoc/sapa-tour.jpg" alt="">
+												<img class="lazy" src="Images/trongNuoc/sapa-tour.jpg" alt="">
 											</div>
 											<div class="info">
 												<div class="location info-item">
@@ -542,7 +552,7 @@
 									<div class="image-tourSlide">
 										<a href="tour-nuoc-ngoai-chi-tiet.html">
 											<div class="image">
-												<img src="Images/nuocNgoai/universal-tour.jpg" alt="">
+												<img class="lazy" src="Images/nuocNgoai/universal-tour.jpg" alt="">
 											</div>
 											<div class="info">
 												<div class="location info-item">
@@ -581,7 +591,7 @@
 									<div class="image-tourSlide">
 										<a href="tour-trong-nuoc-chi-tiet.html">
 											<div class="image">
-												<img src="Images/trongNuoc/dalat-tour.jpg" alt="">
+												<img class="lazy" src="Images/trongNuoc/dalat-tour.jpg" alt="">
 											</div>
 											<div class="info">
 												<div class="location info-item">
@@ -740,9 +750,9 @@
 								<div class="image">
 									<a href="tour-trong-nuoc-chi-tiet.html">
 										<div class="chitiet">
-											<i class="icon-Vitral-plus"></i>
+											<i class="icon-vitravel-plus"></i>
 										</div>
-										<img src="Images/trongNuoc/dalat-tour.jpg" alt="">
+										<img class="lazy" src="Images/trongNuoc/dalat-tour.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -780,9 +790,9 @@
 								<div class="image">
 									<a href="tour-trong-nuoc-chi-tiet.html">
 										<div class="chitiet">
-											<i class="icon-Vitral-plus"></i>
+											<i class="icon-vitravel-plus"></i>
 										</div>
-										<img src="Images/trongNuoc/sapa-tour.jpg" alt="">
+										<img class="lazy" src="Images/trongNuoc/sapa-tour.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -820,9 +830,9 @@
 								<div class="image">
 									<a href="tour-trong-nuoc-chi-tiet.html">
 										<div class="chitiet">
-											<i class="icon-Vitral-plus"></i>
+											<i class="icon-vitravel-plus"></i>
 										</div>
-										<img src="Images/trongNuoc/sapa-tour-2.jpg" alt="">
+										<img class="lazy" src="Images/trongNuoc/sapa-tour-2.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -861,9 +871,9 @@
 								<div class="image">
 									<a href="tour-trong-nuoc-chi-tiet.html">
 										<div class="chitiet">
-											<i class="icon-Vitral-plus"></i>
+											<i class="icon-vitravel-plus"></i>
 										</div>
-										<img src="Images/trongNuoc/dalat-tour-2.jpg" alt="">
+										<img class="lazy" src="Images/trongNuoc/dalat-tour-2.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -901,9 +911,9 @@
 								<div class="image">
 									<a href="tour-trong-nuoc-chi-tiet.html">
 										<div class="chitiet">
-											<i class="icon-Vitral-plus"></i>
+											<i class="icon-vitravel-plus"></i>
 										</div>
-										<img src="Images/trongNuoc/dalat-tour-3.jpg" alt="">
+										<img class="lazy" src="Images/trongNuoc/dalat-tour-3.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -941,9 +951,9 @@
 								<div class="image">
 									<a href="tour-trong-nuoc-chi-tiet.html">
 										<div class="chitiet">
-											<i class="icon-Vitral-plus"></i>
+											<i class="icon-vitravel-plus"></i>
 										</div>
-										<img src="Images/trongNuoc/halong-tour.jpg" alt="">
+										<img class="lazy" src="Images/trongNuoc/halong-tour.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -1023,9 +1033,9 @@
 								<div class="image">
 									<a href="tour-nuoc-ngoai-chi-tiet.html">
 										<div class="chitiet">
-											<i class="icon-Vitral-plus"></i>
+											<i class="icon-vitravel-plus"></i>
 										</div>
-										<img src="Images/nuocNgoai/dubai-tour.jpg" alt="">
+										<img class="lazy" src="Images/nuocNgoai/dubai-tour.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -1063,9 +1073,9 @@
 								<div class="image">
 									<a href="tour-nuoc-ngoai-chi-tiet.html">
 										<div class="chitiet">
-											<i class="icon-Vitral-plus"></i>
+											<i class="icon-vitravel-plus"></i>
 										</div>
-										<img src="Images/nuocNgoai/sing-tour.jpg" alt="">
+										<img class="lazy" src="Images/nuocNgoai/sing-tour.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -1103,9 +1113,9 @@
 								<div class="image">
 									<a href="tour-nuoc-ngoai-chi-tiet.html">
 										<div class="chitiet">
-											<i class="icon-Vitral-plus"></i>
+											<i class="icon-vitravel-plus"></i>
 										</div>
-										<img src="Images/nuocNgoai/sing-tour-3.jpg" alt="">
+										<img class="lazy" src="Images/nuocNgoai/sing-tour-3.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -1144,9 +1154,9 @@
 								<div class="image">
 									<a href="tour-nuoc-ngoai-chi-tiet.html">
 										<div class="chitiet">
-											<i class="icon-Vitral-plus"></i>
+											<i class="icon-vitravel-plus"></i>
 										</div>
-										<img src="Images/nuocNgoai/thai-tour.jpg" alt="">
+										<img class="lazy" src="Images/nuocNgoai/thai-tour.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -1184,9 +1194,9 @@
 								<div class="image">
 									<a href="tour-nuoc-ngoai-chi-tiet.html">
 										<div class="chitiet">
-											<i class="icon-Vitral-plus"></i>
+											<i class="icon-vitravel-plus"></i>
 										</div>
-										<img src="Images/nuocNgoai/universal-tour.jpg" alt="">
+										<img class="lazy" src="Images/nuocNgoai/universal-tour.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -1224,9 +1234,9 @@
 								<div class="image">
 									<a href="tour-nuoc-ngoai-chi-tiet.html">
 										<div class="chitiet">
-											<i class="icon-Vitral-plus"></i>
+											<i class="icon-vitravel-plus"></i>
 										</div>
-										<img src="Images/nuocNgoai/sing-tour-5.jpg" alt="">
+										<img class="lazy" src="Images/nuocNgoai/sing-tour-5.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -1299,7 +1309,7 @@
 							<div class="tintuc-wrap">
 								<div class="image">
 									<a href="tintuc-chitiet.html">
-										<img src="./Images/tintuc/tintuc-image.jpg" alt="">
+										<img class="lazy" src="./Images/tintuc/tintuc-image.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -1332,7 +1342,7 @@
 							<div class="tintuc-wrap">
 								<div class="image">
 									<a href="tintuc-chitiet.html">
-										<img src="Images/tintuc/tintuc-image-width.jpg" alt="">
+										<img class="lazy" src="Images/tintuc/tintuc-image-width.jpg" alt="">
 									</a>
 								</div>
 								<div class="info-box">
@@ -1383,7 +1393,7 @@
 						<div class="item">
 							<div class="avatar">
 								<div class="image">
-									<img src="Images/avatar.png" alt="">
+									<img class="lazy" src="Images/avatar.png" alt="">
 								</div>
 							</div>
 							<div class="detail">
@@ -1402,7 +1412,7 @@
 						<div class="item">
 							<div class="avatar">
 								<div class="image">
-									<img src="Images/avatar.png" alt="">
+									<img class="lazy" src="Images/avatar.png" alt="">
 								</div>
 							</div>
 							<div class="detail">
@@ -1421,7 +1431,7 @@
 						<div class="item">
 							<div class="avatar">
 								<div class="image">
-									<img src="Images/avatar.png" alt="">
+									<img class="lazy" src="Images/avatar.png" alt="">
 								</div>
 							</div>
 							<div class="detail">
@@ -1440,7 +1450,83 @@
 						<div class="item">
 							<div class="avatar">
 								<div class="image">
-									<img src="Images/avatar.png" alt="">
+									<img class="lazy" src="Images/avatar.png" alt="">
+								</div>
+							</div>
+							<div class="detail">
+								<div class="comment">
+									"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+									penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+								</div>
+								<div class="name">
+									<span>LÊ KHOA</span>
+								</div>
+								<div class="career">
+									<span>Sinh viên</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="avatar">
+								<div class="image">
+									<img class="lazy" src="Images/avatar.png" alt="">
+								</div>
+							</div>
+							<div class="detail">
+								<div class="comment">
+									"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+									penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+								</div>
+								<div class="name">
+									<span>LÊ KHOA</span>
+								</div>
+								<div class="career">
+									<span>Sinh viên</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="avatar">
+								<div class="image">
+									<img class="lazy" src="Images/avatar.png" alt="">
+								</div>
+							</div>
+							<div class="detail">
+								<div class="comment">
+									"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+									penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+								</div>
+								<div class="name">
+									<span>LÊ KHOA</span>
+								</div>
+								<div class="career">
+									<span>Sinh viên</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="avatar">
+								<div class="image">
+									<img class="lazy" src="Images/avatar.png" alt="">
+								</div>
+							</div>
+							<div class="detail">
+								<div class="comment">
+									"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+									penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+								</div>
+								<div class="name">
+									<span>LÊ KHOA</span>
+								</div>
+								<div class="career">
+									<span>Sinh viên</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="avatar">
+								<div class="image">
+									<img class="lazy" src="Images/avatar.png" alt="">
 								</div>
 							</div>
 							<div class="detail">
@@ -1468,70 +1554,70 @@
 					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 						<div class="image">
 							<a href="#">
-								<img src="Images/va-logo-gray.png" alt="">
+								<img class="lazy" src="Images/va-logo-gray.png" alt="">
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 						<div class="image">
 							<a href="#">
-								<img src="Images/vitravel-logo-gray.png" alt="">
+								<img class="lazy" src="Images/vitravel-logo-gray.png" alt="">
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 						<div class="image">
 							<a href="#">
-								<img src="Images/sunborn-logo-gray.png" alt="">
+								<img class="lazy" src="Images/sunborn-logo-gray.png" alt="">
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 						<div class="image">
 							<a href="#">
-								<img src="Images/vp-logo-gray.png" alt="">
+								<img class="lazy" src="Images/vp-logo-gray.png" alt="">
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 						<div class="image">
 							<a href="#">
-								<img src="Images/va-logo-gray.png" alt="">
+								<img class="lazy" src="Images/va-logo-gray.png" alt="">
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 						<div class="image">
 							<a href="#">
-								<img src="Images/vp-logo-gray.png" alt="">
+								<img class="lazy" src="Images/vp-logo-gray.png" alt="">
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 						<div class="image">
 							<a href="#">
-								<img src="Images/vp-logo-gray.png" alt="">
+								<img class="lazy" src="Images/vp-logo-gray.png" alt="">
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 						<div class="image">
 							<a href="#">
-								<img src="Images/vitravel-logo-gray.png" alt="">
+								<img class="lazy" src="Images/vitravel-logo-gray.png" alt="">
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 						<div class="image">
 							<a href="#">
-								<img src="Images/sunborn-logo-gray.png" alt="">
+								<img class="lazy" src="Images/sunborn-logo-gray.png" alt="">
 							</a>
 						</div>
 					</div>
 					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
 						<div class="image">
 							<a href="#">
-								<img src="Images/vp-logo-gray.png" alt="">
+								<img class="lazy" src="Images/vp-logo-gray.png" alt="">
 							</a>
 						</div>
 					</div>
@@ -1559,44 +1645,44 @@
 							<div class="container-fluid">
 								<div class="row">
 
-									<div class="col-3 col-sm-3 col-md-3 col-lg-3">
-										<a href="tour-nuoc-ngoai-chi-tiet.html">
-											<img src="Images/gallery/image-gallery – 1.jpg" alt="">
+									<div class="col-3 col-sm-3 col-md-3 col-lg-3" >
+										<a class="image-footer" href="Images/gallery/image-gallery – 1.jpg" data-fancybox-group="thumb" >
+											<img class="lazy" src="Images/gallery/image-gallery – 1.jpg" alt="">
 										</a>
 									</div>
 									<div class="col-3 col-sm-3 col-md-3 col-lg-3">
-										<a href="tour-nuoc-ngoai-chi-tiet.html">
-											<img src="Images/gallery/image-gallery – 2.jpg" alt="">
+										<a class="image-footer" href="Images/gallery/image-gallery – 2.jpg" data-fancybox-group="thumb" >
+											<img class="lazy" src="Images/gallery/image-gallery – 2.jpg" alt="">
 										</a>
 									</div>
 									<div class="col-3 col-sm-3 col-md-3 col-lg-3">
-										<a href="tour-nuoc-ngoai-chi-tiet.html">
-											<img src="Images/gallery/image-gallery – 3.jpg" alt="">
+										<a class="image-footer" href="Images/gallery/image-gallery – 3.jpg" data-fancybox-group="thumb" >
+											<img class="lazy" src="Images/gallery/image-gallery – 3.jpg" alt="">
 										</a>
 									</div>
 									<div class="col-3 col-sm-3 col-md-3 col-lg-3">
-										<a href="tour-nuoc-ngoai-chi-tiet.html">
-											<img src="Images/gallery/image-gallery – 4.jpg" alt="">
+										<a class="image-footer" href="Images/gallery/image-gallery – 4.jpg" data-fancybox-group="thumb" >
+											<img class="lazy" src="Images/gallery/image-gallery – 4.jpg" alt="">
 										</a>
 									</div>
 									<div class="col-3 col-sm-3 col-md-3 col-lg-3">
-										<a href="tour-nuoc-ngoai-chi-tiet.html">
-											<img src="Images/gallery/image-gallery – 5.jpg" alt="">
+										<a class="image-footer" href="Images/gallery/image-gallery – 5.jpg" data-fancybox-group="thumb" >
+											<img class="lazy" src="Images/gallery/image-gallery – 5.jpg" alt="">
 										</a>
 									</div>
 									<div class="col-3 col-sm-3 col-md-3 col-lg-3">
-										<a href="tour-nuoc-ngoai-chi-tiet.html">
-											<img src="Images/gallery/image-gallery – 6.jpg" alt="">
+										<a class="image-footer" href="Images/gallery/image-gallery – 6.jpg" data-fancybox-group="thumb" >
+											<img class="lazy" src="Images/gallery/image-gallery – 6.jpg" alt="">
 										</a>
 									</div>
 									<div class="col-3 col-sm-3 col-md-3 col-lg-3">
-										<a href="tour-nuoc-ngoai-chi-tiet.html">
-											<img src="Images/gallery/image-gallery – 7.jpg" alt="">
+										<a class="image-footer" href="Images/gallery/image-gallery – 7.jpg" data-fancybox-group="thumb" >
+											<img class="lazy" src="Images/gallery/image-gallery – 7.jpg" alt="">
 										</a>
 									</div>
 									<div class="col-3 col-sm-3 col-md-3 col-lg-3">
-										<a href="tour-nuoc-ngoai-chi-tiet.html">
-											<img src="Images/gallery/image-gallery.jpg" alt="">
+										<a class="image-footer" href="Images/gallery/image-gallery.jpg" data-fancybox-group="thumb" >
+											<img class="lazy" src="Images/gallery/image-gallery.jpg" alt="">
 										</a>
 									</div>
 
@@ -1608,7 +1694,7 @@
 						<div class="contain">
 							<div class="title">Facebook</div>
 							<div class="fb-page" data-href="https://www.facebook.com/dulich.vitravel" data-small-header="false" data-adapt-container-width="true"
-							    data-hide-cover="false" data-show-facepile="false">
+							 data-hide-cover="false" data-show-facepile="false">
 								<blockquote cite="https://www.facebook.com/dulich.vitravel" class="fb-xfbml-parse-ignore">
 									<a href="https://www.facebook.com/dulich.vitravel">Vitravel</a>
 								</blockquote>
@@ -1629,7 +1715,7 @@
 
 	<!-- Jquery -->
 	<script src="./js/jquery.min.js" type="text/javascript"></script>
-	
+
 	<!-- Bootstrap -->
 	<script src="./plugin/bootstrap4/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="./js/popper.min.js" type="text/javascript"></script>
@@ -1637,14 +1723,18 @@
 	<!-- Slick -->
 	<script type="text/javascript" src="./plugin/slick/slick/slick.min.js"></script>
 
-	<!-- Datepicker -->
-	<!-- <script src="./plugin/datepicker/dist/datepicker.common.js" type="text/javascript"></script>
-	<script src="./plugin/datepicker/dist/datepicker.esm.js" type="text/javascript"></script>
-	<script src="./plugin/datepicker/dist/datepicker.js" type="text/javascript"></script> -->
+	<!-- lazy load -->
+	<script type="text/javascript" src="./js/jquery.lazyload.js"></script>
 
 	<!-- wow -->
 	<script src="./plugin/wow/dist/wow.min.js" type="text/javascript"></script>
-	
+
+	<!-- Facybox -->
+	<script type="text/javascript" src="plugin/fancybox/source/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="plugin/fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+	<script type="text/javascript" src="plugin/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+	<script type="text/javascript" src="plugin/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+
 	<!-- Javascript -->
 	<script src="./js/main.js" type="text/javascript"></script>
 
@@ -1665,7 +1755,6 @@
 		wow.init();
 
 	</script>
-	<!-- END REVOLUTION SLIDER -->
 
 </body>
 
